@@ -1,0 +1,74 @@
+{
+ "about": "Demo edition of a fictional meetup, built with: python3 build.py --edition examples/riverside-meetup/edition.json --out dist-riverside --serve. It shows a dark scheme, a logo, a bundled heading font, a sub-folder address, the offline copy, a second language edition in the header and the optional directory page. Nothing in it is real: the sites are example.org addresses.",
+
+ "edition": {
+  "name": "Riverside edition",
+  "label": "Second edition, 2026",
+  "community": "Riverside Bitcoin Meetup",
+  "community_url": "https://riverside-meetup.example.org/",
+  "contact": "hello@riverside-meetup.example.org",
+  "repository": "https://codeberg.org/example/guide-to-autonomy",
+  "wordmark": "Riverside",
+  "logo": {"file": "assets/logo.svg", "alt": "Riverside Bitcoin Meetup"},
+  "changes": "Edition name, dark colours, logo, heading font, cover text and reading paths. The chapters are unchanged.",
+  "modified": "2026-10-22"
+ },
+
+ "book": {
+  "title": "A Guide to Autonomy",
+  "title_lines": ["A Guide", "to", "Autonomy"],
+  "outlined_line": 1,
+  "kicker": "Riverside reading group · 2026",
+  "intro": [
+   "The book we read together on Tuesday evenings at the Riverside meetup: privacy, digital autonomy and money, one chapter at a time.",
+   "Each chapter starts from a concrete need, explains why a tool helps and where it falls short, then walks you through the steps, with sources close to the passages they support."
+  ],
+  "start_chapter": "messages",
+  "start_paths": [
+   {"id": "path-first-evening", "title": "Our first evening", "text": "What we set up together at the first session.", "chapters": ["messages", "passwords"]},
+   {"id": "path-bitcoin", "title": "Bitcoin track", "text": "The 7 chapters of the Bitcoin track, in order.",
+    "chapters": ["savings", "first-wallet", "seed", "lightning-and-euros"], "deeper_title": "Later in the year", "deeper": ["bitcoin-privacy", "hardware-wallet", "node"]}
+  ],
+  "search_suggestions": ["Signal", "seed phrase", "Lightning", "VPN"]
+ },
+
+ "language": {"code": "en", "name": "English", "direction": "ltr", "content_dir": "content/en", "locale": "en_GB"},
+ "other_editions": [
+  {"code": "es", "name": "Español", "url": "https://riverside-meetup.example.org/guia/", "note": "Example entry: a Spanish edition published by a sister group."}
+ ],
+
+ "colors": {
+  "scheme": "dark",
+  "background": "#0b1220",
+  "foreground": "#f4f1e8",
+  "parts": [
+   {"accent": "#7dd3fc", "text": "#a5e3ff"},
+   {"accent": "#f0b429", "text": "#f6c75a"},
+   {"accent": "#fb7185", "text": "#fda4b4"}
+  ]
+ },
+
+ "fonts": {
+  "heading": {"family": "JetBrains Mono", "fallback": "ui-monospace, Menlo, Consolas, monospace", "weight": "500",
+   "files": [
+    {"file": "theme/fonts/jetbrainsmono-latin.woff2", "weight": "300 500", "preload": true},
+    {"file": "theme/fonts/jetbrainsmono-latin-ext.woff2", "weight": "300 500",
+     "unicode_range": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF"}
+   ]},
+  "body": {"family": "", "fallback": "Georgia, 'Times New Roman', serif", "files": []}
+ },
+
+ "layout": {"reading_width": "40rem", "page_toc": true, "uppercase_headings": false, "cover_part_bars": true, "show_progress": true, "show_search": true},
+
+ "site": {"url": "https://riverside-meetup.example.org", "base_path": "/guide/", "offline": true, "sitemap": true, "og_image": "", "favicon": "assets/logo.svg"},
+ "storage_key": "guide-autonomy.riverside.v1",
+ "recordings": {
+  "enabled": true,
+  "intro": "Recordings of our meetup talks. Demo entries: the addresses below are fictional and do not play.",
+  "items": [
+   {"title": "Passwords for the whole family", "speaker": "A Riverside member", "note": "in English", "video": "https://media.riverside-meetup.example.org/talks/passwords.mp4", "video_type": "video/mp4", "poster": "assets/talk-poster.svg", "chapters": ["passwords"], "links": [{"label": "Peertube", "href": "https://video.riverside-meetup.example.org/w/passwords"}]},
+   {"title": "Our first Lightning payment", "speaker": "Another member", "note": "slides only", "badge": "No recording", "chapters": ["lightning-and-euros"]}
+  ]
+ },
+ "directory": {"enabled": true, "file": "editions.json"}
+}

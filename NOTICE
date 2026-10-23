@@ -1,0 +1,75 @@
+A Guide to Autonomy
+===================
+
+A learning book about personal and digital autonomy, privacy and money.
+Original work: written for PROOF, an initiative of Cypher Baltics, for the
+first PROOF conference (Vilnius, 2026), and carried as a community project by
+Cypher Baltics. Original publication: https://proofconference.com/book/en/
+This repository is the shared base that any community can fork, adapt and
+publish as its own edition. An edition built from it may differ from the
+original in its name, look, configuration, text and code.
+
+Two licences apply, to two different layers of the project.
+
+1. TEXT: Creative Commons Attribution-ShareAlike 4.0 International
+   (CC-BY-SA-4.0), full text in LICENSE-CONTENT.
+   Covers the book itself: every Markdown file under content/<language>/,
+   including the introduction, the part openings, the 18 chapters, the glossary
+   and the checklist actions, the interface strings (strings.json) and any
+   translation of them. Also covers the documentation of this repository
+   (README.md, docs/, CONTRIBUTING.md, CHANGELOG.md, AGENTS.md, CLAUDE.md).
+   Editorial values written inside JSON files are text too: the wording of the
+   actions in actions.json, the titles in book.json, and the editorial values
+   of an edition.json (cover paragraphs, kicker, reading paths, search
+   suggestions, names) are under CC BY-SA 4.0, like the Markdown they come
+   from or go with.
+
+   You may copy, translate, adapt and sell the text, including for commercial
+   purposes, under the conditions of the licence: among them, credit the
+   original work, indicate that you changed it, and publish your adaptation of
+   the text under the same licence. A reasonable credit is:
+   "Based on A Guide to Autonomy, originally written for PROOF, an initiative
+   of Cypher Baltics (https://proofconference.com/book/en/), CC BY-SA 4.0.
+   Adapted by <your community>, <date>: <what you changed>."
+
+2. CODE: GNU Affero General Public License, version 3 or (at your option) any
+   later version (AGPL-3.0-or-later), full text in LICENSE.
+   Covers the generator (build.py), the packager (release.py), the tests
+   (including tests/reference-ids.json), the GitHub workflows and forms in
+   .github/, the theme (theme/styles.css, theme/app.js, theme/recordings.js,
+   theme/sw.template.js), the browser
+   scripts and stylesheet copied into every built edition, the structure and
+   keys of the configuration and data files (edition.json, examples/*/
+   edition.json, content/*/book.json, content/*/actions.json, content/*/
+   links.json, editions.json; their editorial values are covered by point 1)
+   and the HTML templates of the generated pages.
+
+   You may run, study, change and redistribute the code. The AGPL sets its own
+   conditions; read LICENSE rather than this summary. In short: when you convey
+   the code, or a modified version of it, keep the notices, mark your changes
+   and provide the corresponding source (sections 4 to 6). A built edition
+   conveys code to every reader, because its browser scripts run on the
+   reader's device. Separately, section 13 concerns users who interact with a
+   modified version of the program over a network. Keeping a fork public is
+   useful but is not, on its own, a guarantee that every condition is met. To
+   help, every built edition carries its licences, this notice, the notices of
+   the fonts it serves, a page "Licences, credits and source" and a ZIP of the
+   source it was built from (see release.py and docs/HOSTING.md).
+
+   A generated page combines the two layers: the book text in it stays under
+   CC BY-SA 4.0 and the code and templates under AGPL-3.0-or-later. Neither
+   licence relicenses the other.
+
+THIRD-PARTY RESOURCES keep their own licences and are listed, with what has
+and has not been verified, in THIRD-PARTY.md. In short: the 2 optional font
+families in theme/fonts/ are under the SIL Open Font License 1.1, with their
+full notices next to them; the build needs Python-Markdown (BSD 3-Clause),
+which is not included in this repository; the book links to external sources
+and names tools and brands, none of which are redistributed here.
+
+Neither licence grants rights to the names or visual identities of PROOF,
+Cypher Baltics or any community that publishes an edition. Each edition
+chooses its own name, logo and colours, and keeps the credit to the original
+work.
+
+Copyright (C) 2026 the contributors of A Guide to Autonomy.

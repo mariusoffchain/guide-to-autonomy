@@ -1,0 +1,62 @@
+name: List my edition
+description: Ask for your edition to be added to editions.json, the optional "Other editions" page.
+title: "Edition listing: "
+labels: ["edition-listing"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is a request, not a registration. A maintainer reads it, opens the address, and may add 1 entry to
+        `editions.json` by hand. There is no central directory: each edition decides whether to show the page and
+        when to take the updated list. Removal is possible at any time with another request.
+
+        Everything written here is public. Do not include private contact details.
+  - type: input
+    id: name
+    attributes:
+      label: Edition name
+      placeholder: Harbour edition
+    validations:
+      required: true
+  - type: input
+    id: community
+    attributes:
+      label: Published by
+      description: Public name of the community, group or organisation.
+    validations:
+      required: true
+  - type: input
+    id: site
+    attributes:
+      label: Public address
+      description: Starts with https://, on a public domain name (no IP address, localhost or local network name).
+      placeholder: https://guide.example.org/
+    validations:
+      required: true
+  - type: input
+    id: repository
+    attributes:
+      label: Source repository (optional)
+      placeholder: https://github.com/example/guide-to-autonomy
+  - type: input
+    id: languages
+    attributes:
+      label: Languages
+      description: Language codes, separated by commas.
+      placeholder: en, fr
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Short description (optional)
+      description: 1 or 2 sentences. What differs from the base (language, audience, changes).
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Consent
+      options:
+        - label: I maintain this edition, or its maintainers asked me to send this, and we agree to be listed publicly with the details above.
+          required: true
+        - label: The edition keeps the licences and the credit to the original work, and its page "Licences, credits and source" is online.
+          required: true

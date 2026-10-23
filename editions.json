@@ -1,0 +1,19 @@
+{
+ "about": "Optional, hand-kept list of independent editions of A Guide to Autonomy. An edition shows it as an 'Other editions' page when directory.enabled is true in its edition.json. An edition is added only at the request of its maintainers (issue form or pull request, see CONTRIBUTING.md), with their consent recorded in the entry. The build refuses entries without consent, without a public https address, or listed twice. Nothing here is checked automatically afterwards, and the list does not claim to be complete.",
+ "entry_format": {
+  "name": "Name of the edition",
+  "community": "Who publishes it",
+  "languages": [
+   "en"
+  ],
+  "site": "https://...",
+  "repository": "https://... (optional)",
+  "description": "1 or 2 sentences, optional",
+  "consent": {
+   "public_listing": true,
+   "date": "YYYY-MM-DD",
+   "reference": "where the maintainers asked to be listed, for example the address of their issue"
+  }
+ },
+ "editions": []
+}

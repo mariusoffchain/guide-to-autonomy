@@ -1,0 +1,74 @@
+{
+ "about": "Edition of the Harbour Privacy Circle, a fictional monthly meetup in a port city. Kept in its own folder so the base edition.json stays intact. Build with: python3 build.py --edition examples/harbour-circle/edition.json --out dist-harbour --serve. Every key is explained in docs/CONFIGURATION.md.",
+
+ "edition": {
+  "name": "Harbour Circle edition",
+  "label": "Autumn 2026",
+  "community": "Harbour Privacy Circle",
+  "community_url": "https://harbour-circle.example.org/",
+  "contact": "circle@harbour-circle.example.org",
+  "repository": "",
+  "wordmark": "Harbour Circle",
+  "logo": {"file": "", "alt": ""}
+ },
+
+ "book": {
+  "title": "A Guide to Autonomy",
+  "title_lines": ["A Guide", "to", "Autonomy"],
+  "outlined_line": 1,
+  "kicker": "Read along with the Circle",
+  "intro": [
+   "A learning book for everyone about personal and digital autonomy: keeping your conversations and accounts private, choosing the tools you depend on, and holding your own money, including Bitcoin.",
+   "Each chapter starts from a concrete need, explains why a tool helps and where it falls short, then walks you through the steps, with sources close to the passages they support."
+  ],
+  "start_chapter": "messages",
+  "start_paths": [
+   {"id": "path-accounts", "title": "Protect my accounts",
+    "text": "Passwords and account security first, then your email and your aliases.",
+    "chapters": ["passwords", "email"]},
+   {"id": "path-conversations", "title": "Protect my conversations and my browsing",
+    "text": "Your messengers, then your browser and your searches, then your network.",
+    "chapters": ["messages", "browser", "network"]},
+   {"id": "path-data", "title": "Control my data and my devices",
+    "text": "Alternatives to Big Tech services, the settings of your phone, then hosting your own services.",
+    "chapters": ["big-tech", "phone", "self-hosting"],
+    "deeper_title": "To go deeper", "deeper": ["keys", "nostr", "ai"]},
+   {"id": "path-bitcoin", "title": "Understand Bitcoin",
+    "text": "Savings, a first wallet, backing up the seed phrase, everyday payments, privacy, hardware wallets and your own node.",
+    "chapters": ["savings", "first-wallet", "seed", "lightning-and-euros", "bitcoin-privacy", "hardware-wallet", "node"]}
+  ],
+  "search_suggestions": ["Signal", "VPN", "seed phrase"]
+ },
+
+ "language": {"code": "en", "name": "English", "direction": "ltr", "content_dir": "content/en", "locale": "en_GB"},
+ "other_editions": [],
+
+ "colors": {
+  "scheme": "light",
+  "background": "#faf6ef",
+  "foreground": "#2b1d14",
+  "parts": [
+   {"accent": "#2e8b74", "text": "#1f6b58"},
+   {"accent": "#1f4e8c", "text": "#173d6e"},
+   {"accent": "#b7472a", "text": "#94381f"}
+  ]
+ },
+
+ "fonts": {
+  "heading": {"family": "", "fallback": "system-ui, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif", "weight": "700", "files": []},
+  "body": {"family": "", "fallback": "system-ui, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif", "files": []}
+ },
+
+ "layout": {
+  "reading_width": "42rem",
+  "page_toc": true,
+  "uppercase_headings": false,
+  "cover_part_bars": true,
+  "show_progress": true,
+  "show_search": true
+ },
+
+ "site": {"url": "", "base_path": "/", "offline": false, "sitemap": true, "og_image": "", "favicon": ""},
+ "storage_key": "guide-autonomy.harbour-circle.v1",
+ "directory": {"enabled": true, "file": "editions.json"}
+}

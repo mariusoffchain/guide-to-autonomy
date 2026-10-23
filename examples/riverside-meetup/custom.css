@@ -1,0 +1,2 @@
+/* Optional extra CSS of the demo edition, appended after the theme. Small touches only; the theme itself lives in theme/styles.css. */
+.cover-kicker { color: var(--part-2-text); }

@@ -1,0 +1,23 @@
+name: Correction or improvement of the text
+description: A wrong or outdated fact, a dead link, an unclear step, a tool that changed.
+labels: ["content"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Chapter and section
+      placeholder: "Chapter 9: Your phone, Step by step"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong or missing, and what it should say
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources, with the date you checked them
+    validations:
+      required: true

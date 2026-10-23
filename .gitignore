@@ -1,0 +1,9 @@
+dist/
+dist-*/
+*.build-report.json
+publish/
+publish-*/
+__pycache__/
+*.pyc
+.DS_Store
+.claude/

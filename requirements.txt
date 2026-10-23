@@ -1,0 +1,2 @@
+# Only needed to run build.py. The generated pages need nothing.
+Markdown==3.9

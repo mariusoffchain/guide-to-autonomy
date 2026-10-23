@@ -1,0 +1,76 @@
+{
+ "about": "Settings of this edition. Every key is explained in docs/CONFIGURATION.md. Keep the JSON valid: double quotes, no comma after the last item of a list or object.",
+
+ "edition": {
+  "name": "Community edition",
+  "label": "",
+  "community": "your community",
+  "community_url": "",
+  "contact": "",
+  "repository": "",
+  "wordmark": "",
+  "logo": {"file": "", "alt": ""},
+  "changes": "Reusable community edition adapted from the PROOF guide, with configurable identity, navigation, optional offline reading, licence pages and a matching source archive.",
+  "modified": "2026-10-23"
+ },
+
+ "book": {
+  "title": "A Guide to Autonomy",
+  "title_lines": ["A Guide", "to", "Autonomy"],
+  "outlined_line": 1,
+  "kicker": "A learning book",
+  "intro": [
+   "A learning book for everyone about personal and digital autonomy: keeping your conversations and accounts private, choosing the tools you depend on, and holding your own money, including Bitcoin.",
+   "Each chapter starts from a concrete need, explains why a tool helps and where it falls short, then walks you through the steps, with sources close to the passages they support."
+  ],
+  "start_chapter": "",
+  "start_paths": [
+   {"id": "path-accounts", "title": "Protect my accounts",
+    "text": "Passwords and account security first, then your email and your aliases.",
+    "chapters": ["passwords", "email"]},
+   {"id": "path-conversations", "title": "Protect my conversations and my browsing",
+    "text": "Your messengers, then your browser and your searches, then your network.",
+    "chapters": ["messages", "browser", "network"]},
+   {"id": "path-data", "title": "Control my data and my devices",
+    "text": "Alternatives to Big Tech services, the settings of your phone, then hosting your own services.",
+    "chapters": ["big-tech", "phone", "self-hosting"],
+    "deeper_title": "To go deeper", "deeper": ["keys", "nostr", "ai"]},
+   {"id": "path-bitcoin", "title": "Understand Bitcoin",
+    "text": "Savings, a first wallet, backing up the seed phrase, everyday payments, privacy, hardware wallets and your own node.",
+    "chapters": ["savings", "first-wallet", "seed", "lightning-and-euros", "bitcoin-privacy", "hardware-wallet", "node"]}
+  ],
+  "search_suggestions": ["passphrase", "Signal", "uBlock Origin", "SIM swap", "safety number", "wallet"]
+ },
+
+ "language": {"code": "en", "name": "English", "direction": "ltr", "content_dir": "content/en", "locale": "en_US"},
+ "other_editions": [],
+
+ "colors": {
+  "scheme": "light",
+  "background": "#fbfaf7",
+  "foreground": "#17171a",
+  "parts": [
+   {"accent": "#0f766e", "text": "#0b5e58"},
+   {"accent": "#4f46e5", "text": "#4338ca"},
+   {"accent": "#b45309", "text": "#92400e"}
+  ]
+ },
+
+ "fonts": {
+  "heading": {"family": "", "fallback": "system-ui, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif", "weight": "700", "files": []},
+  "body": {"family": "", "fallback": "system-ui, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif", "files": []}
+ },
+
+ "layout": {
+  "reading_width": "42rem",
+  "page_toc": true,
+  "uppercase_headings": true,
+  "cover_part_bars": true,
+  "show_progress": true,
+  "show_search": true
+ },
+
+ "site": {"url": "", "base_path": "/", "offline": false, "sitemap": true, "og_image": "", "favicon": ""},
+ "storage_key": "guide-autonomy.v1",
+ "directory": {"enabled": false, "file": "editions.json"}
+}

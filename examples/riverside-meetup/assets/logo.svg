@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 64" role="img" aria-label="Riverside Bitcoin Meetup">
+  <!-- Fictional logo made for the demo edition. CC0: do what you want with it. -->
+  <rect x="2" y="2" width="60" height="60" rx="30" fill="none" stroke="#f0b429" stroke-width="4"/>
+  <path d="M18 40c6-14 22-14 28 0" fill="none" stroke="#f0b429" stroke-width="4" stroke-linecap="round"/>
+  <path d="M14 30c8-12 28-12 36 0" fill="none" stroke="#7dd3fc" stroke-width="4" stroke-linecap="round"/>
+  <text x="76" y="30" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#f0b429">Riverside</text>
+  <text x="76" y="52" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="2" fill="#f0b429">BITCOIN MEETUP</text>
+</svg>

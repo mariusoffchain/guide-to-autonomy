@@ -1,0 +1,473 @@
+{
+ "about": "Stable IDs of the checklist actions of this language. build.py matches every \"- [ ] ...\" item of a chapter checklist to the entry of the same chapter whose normalised text is equal (links, case, spacing, quotes and the effort tag in parentheses are ignored). The ID is the key under which a reader's tick is saved in the browser, so never rename or reuse one. Reworded an action? Update its \"text\" here to keep the ID. New or removed action? Run: python3 build.py --update-actions",
+ "actions": [
+  {
+   "id": "messages-1",
+   "chapter": "messages",
+   "text": "Install a private messenger, lock it with a PIN, hide your number and set disappearing messages"
+  },
+  {
+   "id": "messages-2",
+   "chapter": "messages",
+   "text": "Move your 5 closest contacts and your family group"
+  },
+  {
+   "id": "messages-3",
+   "chapter": "messages",
+   "text": "Verify the safety number of your 3 most important contacts"
+  },
+  {
+   "id": "messages-4",
+   "chapter": "messages",
+   "text": "Install a second messenger that needs no phone number"
+  },
+  {
+   "id": "messages-5",
+   "chapter": "messages",
+   "text": "Turn on encrypted backups in the apps you keep"
+  },
+  {
+   "id": "passwords-1",
+   "chapter": "passwords",
+   "text": "Check your email address on Have I Been Pwned"
+  },
+  {
+   "id": "passwords-2",
+   "chapter": "passwords",
+   "text": "Install a password manager and create a passphrase of 6 random words"
+  },
+  {
+   "id": "passwords-3",
+   "chapter": "passwords",
+   "text": "Give your email a new unique password and turn on 2FA with an authenticator app, plus your 2 hardware keys if you bought them"
+  },
+  {
+   "id": "passwords-4",
+   "chapter": "passwords",
+   "text": "Move your 4 next most important accounts and remove SMS codes where possible"
+  },
+  {
+   "id": "passwords-5",
+   "chapter": "passwords",
+   "text": "Put your passphrase on paper in one safe place and your recovery codes in another, and tell 1 trusted person where"
+  },
+  {
+   "id": "browser-1",
+   "chapter": "browser",
+   "text": "Change the default search engine on your computer and your phone"
+  },
+  {
+   "id": "browser-2",
+   "chapter": "browser",
+   "text": "Install a browser that blocks tracking and make it your default"
+  },
+  {
+   "id": "browser-3",
+   "chapter": "browser",
+   "text": "Add uBlock Origin where supported, or use your browser's blocker, and remove unused extensions",
+   "previous_texts": [
+    "Add uBlock Origin, and remove the extensions you do not really use"
+   ]
+  },
+  {
+   "id": "browser-4",
+   "chapter": "browser",
+   "text": "Move your Google and Facebook sessions to a second browser"
+  },
+  {
+   "id": "browser-5",
+   "chapter": "browser",
+   "text": "Test your browser on coveryourtracks.eff.org"
+  },
+  {
+   "id": "email-open-mailbox",
+   "chapter": "email",
+   "text": "Open a mailbox at a provider funded by its users"
+  },
+  {
+   "id": "email-alias-service",
+   "chapter": "email",
+   "text": "Set up an alias service and its browser extension"
+  },
+  {
+   "id": "email-first-alias",
+   "chapter": "email",
+   "text": "Create your first alias and use it for your next signup"
+  },
+  {
+   "id": "email-move-5-accounts",
+   "chapter": "email",
+   "text": "Move your 5 most important accounts to the new address"
+  },
+  {
+   "id": "email-forward-old-mailbox",
+   "chapter": "email",
+   "text": "Forward the old mailbox and move the remaining accounts"
+  },
+  {
+   "id": "network-encrypted-dns",
+   "chapter": "network",
+   "text": "Turn on encrypted DNS on your phone and in your browser"
+  },
+  {
+   "id": "network-install-vpn",
+   "chapter": "network",
+   "text": "Choose and install a VPN from a trustworthy operator"
+  },
+  {
+   "id": "network-kill-switch-leaks",
+   "chapter": "network",
+   "text": "Turn on the kill switch and auto-connect, then check for leaks"
+  },
+  {
+   "id": "network-try-tor-browser",
+   "chapter": "network",
+   "text": "Install Tor Browser and try it once"
+  },
+  {
+   "id": "network-remove-free-vpn",
+   "chapter": "network",
+   "text": "Remove VPN apps whose operator or privacy practices you cannot trust",
+   "previous_texts": [
+    "Remove any \"free VPN\" app from your devices"
+   ]
+  },
+  {
+   "id": "keys-list-keys-codes",
+   "chapter": "keys",
+   "text": "List every key and recovery code you already have"
+  },
+  {
+   "id": "keys-write-backups",
+   "chapter": "keys",
+   "text": "Write the missing backups by hand and store them in 2 places"
+  },
+  {
+   "id": "keys-test-recovery",
+   "chapter": "keys",
+   "text": "Test a recovery with a real recovery code"
+  },
+  {
+   "id": "keys-tell-trusted-person",
+   "chapter": "keys",
+   "text": "Tell a trusted person where your backups are"
+  },
+  {
+   "id": "keys-buy-security-keys",
+   "chapter": "keys",
+   "text": "Buy 2 security keys and add them to your main accounts"
+  },
+  {
+   "id": "nostr-create-keys",
+   "chapter": "nostr",
+   "text": "Install a client and create your keys"
+  },
+  {
+   "id": "nostr-back-up-nsec",
+   "chapter": "nostr",
+   "text": "Back up your nsec on paper or in your password manager"
+  },
+  {
+   "id": "nostr-profile-follow",
+   "chapter": "nostr",
+   "text": "Fill your profile and follow a few people you already know"
+  },
+  {
+   "id": "nostr-signer-second-client",
+   "chapter": "nostr",
+   "text": "Install a signer and log in to a second client through it"
+  },
+  {
+   "id": "nostr-first-zap",
+   "chapter": "nostr",
+   "text": "Add a Lightning address to your profile and send your first zap"
+  },
+  {
+   "id": "big-tech-request-export",
+   "chapter": "big-tech",
+   "text": "Request your data export from Google, Apple or Meta"
+  },
+  {
+   "id": "big-tech-replace-easy-service",
+   "chapter": "big-tech",
+   "text": "Replace 1 easy service: search, maps or notes"
+  },
+  {
+   "id": "big-tech-run-in-parallel",
+   "chapter": "big-tech",
+   "text": "Choose your first important service and run it in parallel for 2 weeks"
+  },
+  {
+   "id": "big-tech-move-data",
+   "chapter": "big-tech",
+   "text": "Move the data and change defaults; delete the old cloud copy only after verifying an independent backup and disabling sync on devices you want to keep",
+   "previous_texts": [
+    "Move the data, change the default on every device, delete the old copy"
+   ]
+  },
+  {
+   "id": "big-tech-plan-next-service",
+   "chapter": "big-tech",
+   "text": "Write the next service to replace in your calendar, 1 month from now"
+  },
+  {
+   "id": "phone-uninstall-apps",
+   "chapter": "phone",
+   "text": "Uninstall the apps you no longer use"
+  },
+  {
+   "id": "phone-review-permissions",
+   "chapter": "phone",
+   "text": "Review location, microphone, camera and contacts permissions"
+  },
+  {
+   "id": "phone-advertising-id",
+   "chapter": "phone",
+   "text": "Delete the advertising ID or turn off tracking"
+  },
+  {
+   "id": "phone-pin-sim-pin",
+   "chapter": "phone",
+   "text": "Set a PIN of 6 digits or more, and a SIM PIN"
+  },
+  {
+   "id": "phone-adp-or-f-droid",
+   "chapter": "phone",
+   "text": "On iPhone, turn on Advanced Data Protection. On Android, install F-Droid and try 1 app"
+  },
+  {
+   "id": "self-hosting-find-computer",
+   "chapter": "self-hosting",
+   "text": "Find a computer that can stay on, such as an old laptop, a mini PC or a Raspberry Pi"
+  },
+  {
+   "id": "self-hosting-install-platform",
+   "chapter": "self-hosting",
+   "text": "Install a platform and a first app"
+  },
+  {
+   "id": "self-hosting-automatic-backups",
+   "chapter": "self-hosting",
+   "text": "Set up automatic backups on a second disk, plus a copy off-site"
+  },
+  {
+   "id": "self-hosting-test-restore",
+   "chapter": "self-hosting",
+   "text": "Restore a file from the backup to check that it works"
+  },
+  {
+   "id": "self-hosting-remote-access",
+   "chapter": "self-hosting",
+   "text": "Choose a safe way to reach it from outside, and change every default password"
+  },
+  {
+   "id": "ai-install-local-app",
+   "chapter": "ai",
+   "text": "Install 1 local AI app and download a small model"
+  },
+  {
+   "id": "ai-offline-check",
+   "chapter": "ai",
+   "text": "Turn off the network and check that the model still answers"
+  },
+  {
+   "id": "ai-private-document",
+   "chapter": "ai",
+   "text": "Try it on a document you would never upload"
+  },
+  {
+   "id": "ai-turn-off-training",
+   "chapter": "ai",
+   "text": "Turn off training and chat history in the online assistants you keep"
+  },
+  {
+   "id": "ai-write-rules",
+   "chapter": "ai",
+   "text": "Write down what stays local, what may go online, and what no AI ever sees"
+  },
+  {
+   "id": "savings-draw-map",
+   "chapter": "savings",
+   "text": "Draw the map of where your savings are and who holds each part"
+  },
+  {
+   "id": "savings-5-questions",
+   "chapter": "savings",
+   "text": "Answer the 5 questions for your main account and your main investment"
+  },
+  {
+   "id": "savings-single-point",
+   "chapter": "savings",
+   "text": "Check that no single bank or broker holds everything you own"
+  },
+  {
+   "id": "savings-cash-reserve",
+   "chapter": "savings",
+   "text": "Set aside a small cash reserve at home"
+  },
+  {
+   "id": "savings-choose-asset",
+   "chapter": "savings",
+   "text": "Decide which self-held asset you want to learn first, and with what small amount"
+  },
+  {
+   "id": "first-wallet-install",
+   "chapter": "first-wallet",
+   "text": "Install a self-custodial wallet from its official source, after checking the developer name and its page on walletscrutiny.com"
+  },
+  {
+   "id": "first-wallet-write-words",
+   "chapter": "first-wallet",
+   "text": "Write the recovery words on paper before receiving anything"
+  },
+  {
+   "id": "first-wallet-first-payment",
+   "chapter": "first-wallet",
+   "text": "Receive a first payment larger than the setup fee and send some back"
+  },
+  {
+   "id": "first-wallet-second-wallet",
+   "chapter": "first-wallet",
+   "text": "Install a second wallet from another team and compare"
+  },
+  {
+   "id": "first-wallet-leave-exchange",
+   "chapter": "first-wallet",
+   "text": "Move anything you left on an exchange to a wallet you control"
+  },
+  {
+   "id": "seed-write-by-hand",
+   "chapter": "seed",
+   "text": "Write your words by hand and check them twice"
+  },
+  {
+   "id": "seed-delete-digital-copies",
+   "chapter": "seed",
+   "text": "Remove digital seed copies; if exposure is possible, move funds safely to a fresh wallet, since deletion does not undo a leak",
+   "previous_texts": [
+    "Delete any photo, note or file that contains them"
+   ]
+  },
+  {
+   "id": "seed-second-copy",
+   "chapter": "seed",
+   "text": "Make a second copy and store it in a second place"
+  },
+  {
+   "id": "seed-test-recovery",
+   "chapter": "seed",
+   "text": "Test a tiny software wallet on a second device without deleting the original; check hardware backups only with the maker's hardware procedure",
+   "previous_texts": [
+    "Test the recovery on a second device, without deleting the original app"
+   ]
+  },
+  {
+   "id": "seed-letter-steel-copy",
+   "chapter": "seed",
+   "text": "Write the sealed letter for your family and make a steel copy"
+  },
+  {
+   "id": "lightning-and-euros-pay-invoice",
+   "chapter": "lightning-and-euros",
+   "text": "Pay a Lightning invoice, at a merchant or a meetup"
+  },
+  {
+   "id": "lightning-and-euros-lightning-address",
+   "chapter": "lightning-and-euros",
+   "text": "Get a Lightning address and test it from a second wallet"
+  },
+  {
+   "id": "lightning-and-euros-btcmap",
+   "chapter": "lightning-and-euros",
+   "text": "Find 3 places near you on btcmap.org"
+  },
+  {
+   "id": "lightning-and-euros-withdraw",
+   "chapter": "lightning-and-euros",
+   "text": "Withdraw any balance from a broker or exchange to your own wallet"
+  },
+  {
+   "id": "lightning-and-euros-peer-to-peer",
+   "chapter": "lightning-and-euros",
+   "text": "Read how a peer-to-peer exchange works, before you need it"
+  },
+  {
+   "id": "bitcoin-privacy-fresh-address",
+   "chapter": "bitcoin-privacy",
+   "text": "Check that your wallet shows a fresh address for every payment"
+  },
+  {
+   "id": "bitcoin-privacy-public-addresses",
+   "chapter": "bitcoin-privacy",
+   "text": "Find any address or balance you have posted publicly, and stop receiving on those addresses"
+  },
+  {
+   "id": "bitcoin-privacy-separate-wallets",
+   "chapter": "bitcoin-privacy",
+   "text": "Create separate wallets for savings, spending and exchange withdrawals"
+  },
+  {
+   "id": "bitcoin-privacy-label-coins",
+   "chapter": "bitcoin-privacy",
+   "text": "Label every coin you own with its origin"
+  },
+  {
+   "id": "bitcoin-privacy-own-node",
+   "chapter": "bitcoin-privacy",
+   "text": "Connect your wallet to your own node, after chapter 18"
+  },
+  {
+   "id": "hardware-wallet-savings-amount",
+   "chapter": "hardware-wallet",
+   "text": "Decide what amount is \"savings\" for you and no longer belongs on a phone"
+  },
+  {
+   "id": "hardware-wallet-order-device",
+   "chapter": "hardware-wallet",
+   "text": "Choose a device from the table and order it from the maker, to a pickup point"
+  },
+  {
+   "id": "hardware-wallet-set-up",
+   "chapter": "hardware-wallet",
+   "text": "Check the device and its firmware the way the maker describes, create a new seed and a backup, then send a test amount"
+  },
+  {
+   "id": "hardware-wallet-test-restore",
+   "chapter": "hardware-wallet",
+   "text": "With only a tiny test balance, follow the maker's hardware backup-check or restore procedure before adding savings",
+   "previous_texts": [
+    "Wipe the device and restore it from the backup"
+   ]
+  },
+  {
+   "id": "hardware-wallet-verify-address",
+   "chapter": "hardware-wallet",
+   "text": "Verify the address on the device screen at every receive"
+  },
+  {
+   "id": "node-check-server",
+   "chapter": "node",
+   "text": "Look in your wallet's network settings and see which server it uses today"
+  },
+  {
+   "id": "node-bitcoin-core-pruned",
+   "chapter": "node",
+   "text": "Verify the Bitcoin Core download, install it in pruned mode so it does not fill your disk, and watch it synchronise"
+  },
+  {
+   "id": "node-choose-platform",
+   "chapter": "node",
+   "text": "Choose a platform and the hardware for a dedicated node, with a 2 TB SSD"
+  },
+  {
+   "id": "node-build-node",
+   "chapter": "node",
+   "text": "Build the node, start the synchronisation (a few days, unattended) and add an Electrum server"
+  },
+  {
+   "id": "node-connect-wallet",
+   "chapter": "node",
+   "text": "Point your wallet to your own node and remove the public server"
+  }
+ ]
+}

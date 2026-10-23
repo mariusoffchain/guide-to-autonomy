@@ -1,0 +1,166 @@
+{
+ "about": "Structure of this language edition: parts, chapters and other pages, in reading order. Titles here must match the \"# \" title of each Markdown file.",
+ "parts": [
+  {
+   "number": 1,
+   "file": "10-part1-privacy.md",
+   "id": "part-1",
+   "slug": "privacy",
+   "title": "Proof of Privacy"
+  },
+  {
+   "number": 2,
+   "file": "20-part2-autonomy.md",
+   "id": "part-2",
+   "slug": "autonomy",
+   "title": "Proof of Autonomy"
+  },
+  {
+   "number": 3,
+   "file": "30-part3-work.md",
+   "id": "part-3",
+   "slug": "work",
+   "title": "Proof of Work"
+  }
+ ],
+ "introduction": {
+  "file": "00-introduction.md",
+  "id": "introduction",
+  "slug": "introduction",
+  "title": "Introduction"
+ },
+ "glossary": {
+  "file": "90-glossary.md",
+  "id": "glossary",
+  "slug": "glossary",
+  "title": "Glossary"
+ },
+ "chapters": [
+  {
+   "number": 1,
+   "id": "messages",
+   "part": 1,
+   "file": "11-messages.md",
+   "title": "Your messages"
+  },
+  {
+   "number": 2,
+   "id": "passwords",
+   "part": 1,
+   "file": "12-passwords.md",
+   "title": "Your passwords and your accounts"
+  },
+  {
+   "number": 3,
+   "id": "browser",
+   "part": 1,
+   "file": "13-browser.md",
+   "title": "Your browser and your searches"
+  },
+  {
+   "number": 4,
+   "id": "email",
+   "part": 1,
+   "file": "14-email.md",
+   "title": "Your email and your aliases"
+  },
+  {
+   "number": 5,
+   "id": "network",
+   "part": 1,
+   "file": "15-network.md",
+   "title": "Your network"
+  },
+  {
+   "number": 6,
+   "id": "keys",
+   "part": 2,
+   "file": "21-keys.md",
+   "title": "Keys instead of accounts"
+  },
+  {
+   "number": 7,
+   "id": "nostr",
+   "part": 2,
+   "file": "22-nostr.md",
+   "title": "Nostr: an open network without a company in charge"
+  },
+  {
+   "number": 8,
+   "id": "big-tech",
+   "part": 2,
+   "file": "23-big-tech.md",
+   "title": "Replacing Big Tech services, one at a time"
+  },
+  {
+   "number": 9,
+   "id": "phone",
+   "part": 2,
+   "file": "24-phone.md",
+   "title": "Taking back control of your phone"
+  },
+  {
+   "number": 10,
+   "id": "self-hosting",
+   "part": 2,
+   "file": "25-self-hosting.md",
+   "title": "Hosting your own services"
+  },
+  {
+   "number": 11,
+   "id": "ai",
+   "part": 2,
+   "file": "26-ai.md",
+   "title": "AI without giving yourself away"
+  },
+  {
+   "number": 12,
+   "id": "savings",
+   "part": 3,
+   "file": "31-savings.md",
+   "title": "Where to keep the fruit of your work"
+  },
+  {
+   "number": 13,
+   "id": "first-wallet",
+   "part": 3,
+   "file": "32-first-wallet.md",
+   "title": "Your first wallet and your first sats"
+  },
+  {
+   "number": 14,
+   "id": "seed",
+   "part": 3,
+   "file": "33-seed.md",
+   "title": "Backing up your seed phrase"
+  },
+  {
+   "number": 15,
+   "id": "lightning-and-euros",
+   "part": 3,
+   "file": "34-lightning-and-euros.md",
+   "title": "Lightning and euros in everyday life"
+  },
+  {
+   "number": 16,
+   "id": "bitcoin-privacy",
+   "part": 3,
+   "file": "35-bitcoin-privacy.md",
+   "title": "Privacy in Bitcoin"
+  },
+  {
+   "number": 17,
+   "id": "hardware-wallet",
+   "part": 3,
+   "file": "36-hardware-wallet.md",
+   "title": "Hardware wallets"
+  },
+  {
+   "number": 18,
+   "id": "node",
+   "part": 3,
+   "file": "37-node.md",
+   "title": "Running your own node"
+  }
+ ]
+}

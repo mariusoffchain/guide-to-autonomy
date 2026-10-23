@@ -1,0 +1,34 @@
+{
+ "about": "Directory shown by the demo edition. Fictional entries on example.org addresses.",
+ "editions": [
+  {
+   "name": "Riverside edition",
+   "community": "Riverside Bitcoin Meetup",
+   "languages": [
+    "en"
+   ],
+   "site": "https://riverside-meetup.example.org/guide/",
+   "repository": "https://codeberg.org/example/guide-to-autonomy",
+   "description": "The edition you are reading, from the fictional Riverside meetup.",
+   "consent": {
+    "public_listing": true,
+    "date": "2026-10-22",
+    "reference": "fictional entry for the demo"
+   }
+  },
+  {
+   "name": "Guía de la autonomía",
+   "community": "Grupo Bitcoin del Puerto",
+   "languages": [
+    "es"
+   ],
+   "site": "https://riverside-meetup.example.org/guia/",
+   "description": "Example entry: a Spanish adaptation by a sister group.",
+   "consent": {
+    "public_listing": true,
+    "date": "2026-10-22",
+    "reference": "fictional entry for the demo"
+   }
+  }
+ ]
+}

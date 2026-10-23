@@ -1,0 +1,72 @@
+# Builds the edition and publishes it with GitHub Pages, only when started by hand
+# (Actions tab, "Build and publish the edition", "Run workflow"). Nothing runs on push.
+# Before the first run: Settings > Pages > Build and deployment > Source: "GitHub Actions".
+# No secret is needed. release.py builds into dist/ and copies only the files of that build
+# (release-manifest.json) into publish/; only publish/ is uploaded. See docs/HOSTING.md.
+name: Build and publish the edition
+
+on:
+  workflow_dispatch:
+    inputs:
+      edition:
+        description: "Edition file to build"
+        default: "edition.json"
+        required: true
+      address:
+        description: "Address written into the pages (canonical links, sitemap)"
+        type: choice
+        default: "github-pages"
+        options:
+          - "github-pages"
+          - "edition.json"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - id: pages
+        uses: actions/configure-pages@v5
+      - run: python3 -m pip install -r requirements.txt
+      - run: python3 -m unittest discover tests
+      # "github-pages": the address GitHub gives this site (https://<user>.github.io/<repository>/, or the
+      # custom domain set in Settings > Pages), so the first publication is already correct.
+      # "edition.json": site.url and site.base_path of the edition file, unchanged.
+      - name: Build and export
+        env:
+          EDITION: ${{ inputs.edition }}
+          ADDRESS: ${{ inputs.address }}
+          PAGES_ORIGIN: ${{ steps.pages.outputs.origin }}
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: |
+          if [ "$ADDRESS" = "github-pages" ]; then
+            python3 release.py --edition "$EDITION" --out dist --dest publish --site-url "$PAGES_ORIGIN" --base-path "${PAGES_BASE_PATH:-/}"
+          else
+            python3 release.py --edition "$EDITION" --out dist --dest publish
+          fi
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: publish
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

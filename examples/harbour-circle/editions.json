@@ -1,0 +1,4 @@
+{
+ "about": "Hand-kept list of other editions shown on the 'Other editions' page of the Harbour Circle edition. Empty for now: the page is enabled so that the Circle can add sister editions later. Entry format: see entry_format in the editions.json at the root of the repository.",
+ "editions": []
+}
