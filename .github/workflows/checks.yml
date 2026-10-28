@@ -11,15 +11,16 @@ permissions:
 
 jobs:
   check:
-    runs-on: ubuntu-latest
+    # Python 3.9, the oldest version the kit supports, is not built for Ubuntu 26.04, where ubuntu-latest is moving.
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
         python-version: ["3.9", "3.12"]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           persist-credentials: false
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: ${{ matrix.python-version }}
       - run: python3 -m pip install -r requirements.txt

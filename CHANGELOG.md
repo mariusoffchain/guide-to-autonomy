@@ -2,6 +2,18 @@
 
 What changed in each version of the base, for the people who maintain an edition. Versions follow `MAJOR.MINOR.PATCH`: a patch fixes, a minor version adds without breaking an edition, a major version may need changes in editions (always listed under "Needs your attention"). Each version has a Git tag `v<version>`. How to take an update: [docs/UPDATING.md](docs/UPDATING.md).
 
+## 1.0.1, 2026-10-28
+
+### Building and publishing
+
+- GitHub workflows use the current major versions of their actions, which run on Node.js 24: `actions/checkout@v7`, `actions/setup-python@v7`, `actions/configure-pages@v6`, `actions/upload-pages-artifact@v5`, `actions/deploy-pages@v5`. GitHub had warned that the previous versions targeted Node.js 20, which is deprecated.
+- The checks workflow runs on `ubuntu-24.04` instead of `ubuntu-latest`: Python 3.9, the oldest version the kit supports, is not built for Ubuntu 26.04, which `ubuntu-latest` is moving to.
+
+### Needs your attention
+
+- If you edited `.github/workflows/pages.yml` or `checks.yml` in your edition, merge these lines by hand. Nothing else changes: same text, same 90 action ids, same configuration keys.
+- `upload-pages-artifact` leaves out files whose name starts with a dot, as it did since its version 4. The export of `release.py` contains none.
+
 ## 1.0.0, 2026-10-23
 
 First public version of the base.

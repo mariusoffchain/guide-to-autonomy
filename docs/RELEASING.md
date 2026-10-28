@@ -19,6 +19,10 @@ For the maintainers of the base repository. Editions do not need this page; they
 5. If chapter or action ids changed on purpose, update `tests/reference-ids.json` in the same commit, and say why in the changelog.
 6. Look at what will be public: `git status`, `git diff`, and the files of the source archive (`python3 -m zipfile -l dist/source/guide-to-autonomy-source.zip`). No local path, no private note, no report about other people, no secret. `build.py` stops on common local paths; it cannot judge the rest.
 
+## Actions of the workflows
+
+Once a year, or when GitHub warns about them in a run, check the major versions used in `.github/workflows/` against the latest releases of each action (`gh api repos/actions/<name>/releases/latest`), read their breaking changes, and keep the checks job on a runner image that still provides Python 3.9 as long as the kit supports it.
+
 ## Tag and publish
 
 ```bash

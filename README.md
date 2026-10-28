@@ -55,7 +55,7 @@ Changing the text, adding a chapter or a language, editing the theme or the gene
 
 ## Versions and updates
 
-The base has numbered versions (`1.0.0`, `1.1.0`…) described in [CHANGELOG.md](CHANGELOG.md), with Git tags of the same name. The version is written in every generated page (`<meta name="generator">`). Nothing reaches your edition until you pull it, and no update can promise that your customisations survive every merge untouched: [docs/UPDATING.md](docs/UPDATING.md) shows how to see what changed, merge, resolve conflicts and check that the ids of the 90 actions, under which readers' ticks are saved, are still there.
+The base has numbered versions (`1.0.0`, `1.1.0`…) described in [CHANGELOG.md](CHANGELOG.md), with Git tags `v1.0.0`, `v1.1.0`…. The version is written in every generated page (`<meta name="generator">`). Nothing reaches your edition until you pull it, and no update can promise that your customisations survive every merge untouched: [docs/UPDATING.md](docs/UPDATING.md) shows how to see what changed, merge, resolve conflicts and check that the ids of the 90 actions, under which readers' ticks are saved, are still there.
 
 ## Repository map
 
