@@ -1,4 +1,4 @@
-# Part 1: Proof of Privacy
+# Part 1: Privacy
 
 ## Why privacy matters
 

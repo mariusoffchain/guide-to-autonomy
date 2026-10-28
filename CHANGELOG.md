@@ -2,6 +2,24 @@
 
 What changed in each version of the base, for the people who maintain an edition. Versions follow `MAJOR.MINOR.PATCH`: a patch fixes, a minor version adds without breaking an edition, a major version may need changes in editions (always listed under "Needs your attention"). Each version has a Git tag `v<version>`. How to take an update: [docs/UPDATING.md](docs/UPDATING.md).
 
+## 1.1.0, 2026-10-29
+
+A neutral base: nothing in the pages of an edition names the original event any more, apart from the credit on the page "Licences, credits and source".
+
+### Book
+
+- The 3 parts are called **Privacy**, **Autonomy** and **Money**, instead of titles built on the word "proof". The introduction presents them as "3 parts", and the opening essay of part 3 no longer explains the double meaning of its former title. Chapter 11 announces "Part 3, Money".
+- The address of the part 3 opening becomes `money/` (it was `work/`). Part ids (`part-1` to `part-3`), the 18 chapter ids and the 90 action ids do not change, so readers' ticks are kept.
+
+### Editions
+
+- The credit to the original work moves to the page "Licences, credits and source", which every footer and the colophon link to. It is no longer printed in the footer of every page nor on the cover. The credit, the licences and the source archive are unchanged.
+
+### Needs your attention
+
+- Links to `<your edition>/work/` from outside now land on the 404 page; point them to `money/`. To keep the former address, set `"slug": "work"` for part 3 in your `content/en/book.json`.
+- If you kept the former part titles on purpose, for example an edition tied to the original event, keep your own `book.json` titles and the `#` lines of `10-part1-privacy.md`, `20-part2-autonomy.md` and `30-part3-work.md` when you merge: they must match each other.
+
 ## 1.0.1, 2026-10-28
 
 ### Building and publishing

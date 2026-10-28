@@ -1,4 +1,4 @@
-# Part 3: Proof of Work
+# Part 3: Money
 
 ## Why protecting your work matters
 
@@ -8,7 +8,7 @@ You trade hours of your life for money, and what you do not spend today you keep
 
 For that to succeed, whatever holds your savings has to pass 2 tests. It must still be worth something when you need it, and it must still be yours, reachable and usable, on that day. The first test gets most of the attention, while the second tends to be forgotten until an account is blocked or a bank is in the news.
 
-The name of this part has 2 meanings. It refers to the proof of your own work, what you earned and how to keep it, and to the mechanism that secures Bitcoin, one of the tools examined closely in the following chapters. Bitcoin is not the whole answer, and this part does not pretend it is.
+This part is about the fruit of your work, what you earned and how to keep it, and about the tools that can help, among them Bitcoin, examined closely in the following chapters. Bitcoin is not the whole answer, and this part does not pretend it is.
 
 ### Money that loses value by design
 

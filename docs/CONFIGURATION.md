@@ -172,7 +172,7 @@ The 2 licences of the project, used in the footer and colophon. Defaults are CC 
 
 The build adds these to every edition; no key turns them off:
 
-- A credit to the original work in the footer and the colophon: *A Guide to Autonomy*, originally written for PROOF, an initiative of Cypher Baltics, with a link to https://proofconference.com/book/en/, and the name of the community that adapted it.
+- A credit to the original work on the page "Licences, credits and source": *A Guide to Autonomy*, originally written for PROOF, an initiative of Cypher Baltics, with a link to https://proofconference.com/book/en/, and the name of the community that adapted it. Every footer and the colophon of the cover link to that page; the credit itself is not repeated on every page.
 - A page "Licences, credits and source" (`legal/`), linked from every footer and from the contents: original work, this edition and its changes (`edition.changes`, `edition.modified`), licences, font notices, source, names and logos.
 - The full texts `legal/LICENSE.txt`, `legal/LICENSE-CONTENT.txt`, `legal/NOTICE.txt`, `legal/THIRD-PARTY.txt`, and `legal/fonts/` with the full notice of each font the edition serves.
 - `source/guide-to-autonomy-source.zip`: the source of the edition, made by `release.py` from an explicit list (generator, packager, tests, theme, text of the configured language, docs, licences, the edition file with its `assets/`, `custom.css` and `editions.json`, and every file the configuration references). The same inputs give the same bytes. It never contains Git data, CI workflows, internal reports, built output or other editions. A referenced file outside the repository or behind a symbolic link stops the build.

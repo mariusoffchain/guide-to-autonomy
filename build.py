@@ -56,7 +56,7 @@ import release  # noqa: E402  (source archive and notices, next to this file)
 
 THEME = ROOT / 'theme'
 # Version of the base (generator, theme and reference text). Each release is described in CHANGELOG.md.
-VERSION = '1.0.1'
+VERSION = '1.1.0'
 # The original work, credited in every edition whatever its own name and branding.
 ORIGINAL = {'title': 'A Guide to Autonomy', 'project': 'PROOF', 'initiative': 'Cypher Baltics',
             'url': 'https://proofconference.com/book/en/'}
@@ -1258,7 +1258,8 @@ class Guide:
         if E['repository']:
             about.append('<p>%s</p>' % S('about_source', repository='<a class="ext" rel="noopener noreferrer" href="%s">%s</a>' % (esc(E['repository']), esc(E['repository']))))
         about.append('<p>%s %s</p>' % (self.licence_links(), esc(S('licence_note'))))
-        about.append('<p>%s %s.</p>' % (self.original_credit(), self.legal_link()))
+        # The credit to the original work lives on the page "Licences, credits and source", linked here and in every footer.
+        about.append('<p>%s</p>' % self.S.opt('about_credits', 'Original work, credits, licences and source: {link}.', link=self.legal_link()))
         if self.cfg['site']['offline']:
             about.append('<p class="offline-state" data-offline hidden></p>')
         main += ('<section class="block" aria-labelledby="edition"><p class="block-kicker">%s</p>'
@@ -1558,10 +1559,10 @@ class Guide:
         for o in self.cfg['other_editions']:
             links.append('<a href="%s" hreflang="%s" lang="%s">%s</a>' % (esc(o['url']), esc(o['code']), esc(o['code']), esc(o['name'])))
         links.append(self.legal_link())
-        return ('<div class="footer-inner"><p class="footer-mark">%s</p><p>%s</p><p>%s %s</p><p>%s</p>%s%s</div>'
+        return ('<div class="footer-inner"><p class="footer-mark">%s</p><p>%s</p><p>%s %s</p>%s%s</div>'
                 % (esc(self.B['title']) + (' · ' + esc(E['name']) if E['name'] else ''),
                    esc(S('footer_counts', edition=E['name'], community=E['community'], chapters=len(self.chapters), actions=self.total_actions)),
-                   self.licence_links(), esc(S('licence_note')), self.original_credit(),
+                   self.licence_links(), esc(S('licence_note')),
                    '<p>%s</p>' % esc(S('storage_sentence')) if self.show_actions else '',
                    '<p class="footer-links">%s</p>' % ' · '.join(links) if links else ''))
 

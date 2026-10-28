@@ -182,11 +182,13 @@ class BuiltEdition(unittest.TestCase):
     def test_custom_edition_credits_original(self):
         page = (self.out / 'messages' / 'index.html').read_text(encoding='utf-8')
         self.assertIn('Riverside edition', page)
-        self.assertIn('Cypher Baltics', page)
-        self.assertIn('https://proofconference.com/book/en/', page)
+        # The credit is on the legal page, linked from every footer, not repeated on every page.
+        self.assertNotIn('PROOF', page)
         self.assertIn('href="/guide/legal/"', page)
         legal = (self.out / 'legal' / 'index.html').read_text(encoding='utf-8')
         self.assertIn('PROOF', legal)
+        self.assertIn('Cypher Baltics', legal)
+        self.assertIn('https://proofconference.com/book/en/', legal)
         self.assertIn('Riverside Bitcoin Meetup', legal)
         self.assertIn('2026-10-22', legal)
 

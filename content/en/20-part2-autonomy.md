@@ -1,4 +1,4 @@
-# Part 2: Proof of Autonomy
+# Part 2: Autonomy
 
 ## Why autonomy matters
 

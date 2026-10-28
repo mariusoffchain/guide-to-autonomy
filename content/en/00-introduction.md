@@ -10,15 +10,15 @@ This book connects the evening and the habits. It takes the ideas from the stage
 
 Nothing here asks you to change your whole life. You change a single habit and then, when you are ready, another.
 
-## 3 proofs
+## 3 parts
 
-The 3 parts are named after 3 kinds of proof.
+The book has 3 parts.
 
-**Proof of Privacy** is about protecting your messages, your passwords, your browser, your email and your network connection. It comes first because the other 2 parts rest on it.
+**Privacy** is about protecting your messages, your passwords, your browser, your email and your network connection. It comes first because the other 2 parts rest on it.
 
-**Proof of Autonomy** is about depending less on gatekeepers, the few large companies that can close your account, change the rules overnight or lose your data. Its chapters cover keys instead of accounts, Nostr, replacing Big Tech services one at a time, and hosting a few things yourself.
+**Autonomy** is about depending less on gatekeepers, the few large companies that can close your account, change the rules overnight or lose your data. Its chapters cover keys instead of accounts, Nostr, replacing Big Tech services one at a time, and hosting a few things yourself.
 
-**Proof of Work** is about protecting the fruit of your work, your income and your savings. Money tends to lose value over time, sometimes fast: in October 2022, annual inflation reached [10.6% in the euro area and 22.1% in Lithuania](https://ec.europa.eu/eurostat/documents/2995521/15265521/2-17112022-AP-EN.pdf/b6953137-786e-ed9c-5ee2-6812c0f8f07f), according to Eurostat. Most of what you own is also held, watched and sometimes frozen by someone else. You will compare the places where value can live (bank accounts, shares, gold, Bitcoin and, for advanced users, Monero), then learn to use Bitcoin, a tool in that list that you can hold and verify by yourself, provided you keep your own keys.
+**Money** is about protecting the fruit of your work, your income and your savings. Money tends to lose value over time, sometimes fast: in October 2022, annual inflation reached [10.6% in the euro area and 22.1% in Lithuania](https://ec.europa.eu/eurostat/documents/2995521/15265521/2-17112022-AP-EN.pdf/b6953137-786e-ed9c-5ee2-6812c0f8f07f), according to Eurostat. Most of what you own is also held, watched and sometimes frozen by someone else. You will compare the places where value can live (bank accounts, shares, gold, Bitcoin and, for advanced users, Monero), then learn to use Bitcoin, a tool in that list that you can hold and verify by yourself, provided you keep your own keys.
 
 All 3 parts ask who holds the keys, because in practice that person is in control.
 

@@ -6,21 +6,21 @@
    "file": "10-part1-privacy.md",
    "id": "part-1",
    "slug": "privacy",
-   "title": "Proof of Privacy"
+   "title": "Privacy"
   },
   {
    "number": 2,
    "file": "20-part2-autonomy.md",
    "id": "part-2",
    "slug": "autonomy",
-   "title": "Proof of Autonomy"
+   "title": "Autonomy"
   },
   {
    "number": 3,
    "file": "30-part3-work.md",
    "id": "part-3",
-   "slug": "work",
-   "title": "Proof of Work"
+   "slug": "money",
+   "title": "Money"
   }
  ],
  "introduction": {
