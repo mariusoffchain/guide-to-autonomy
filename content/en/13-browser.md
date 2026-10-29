@@ -68,15 +68,15 @@ Changing your search engine takes about a minute, which makes it one of the easi
 | **Kagi** | Its own index plus several other sources | Paid subscription, no ads | US company. Needs an account. Funded by its users only. |
 | **SearXNG** | Combines many engines at once | Nothing. It is free, open-source software | Host it yourself or use a public instance (list at searx.space). You then trust whoever runs that instance. |
 
-Try one for 2 weeks before judging. Results for local Lithuanian searches can vary from one engine to another, and nothing stops you from using a second engine for the occasional difficult query.
+Try one for 2 weeks before judging. Results for local searches, in your country and your language, can vary from one engine to another, and nothing stops you from using a second engine for the occasional difficult query.
 
 ## Step by step
 
 The example uses Firefox on a computer, because it exists on every system and is independent from Google's engine. The same logic applies to the others, and the names of settings may move slightly between versions.
 
-1. **Install it** from mozilla.org or your system's official store.
+1. **Install it** from firefox.com or your system's official store.
 2. **Raise the protection.** In Settings, Privacy & Security, set Enhanced Tracking Protection to Strict.
-3. **Force encrypted connections.** On the same page, turn on HTTPS-Only Mode in all windows. This is the step that replaces trust with verification, since the browser then checks a certificate on every connection instead of relying on the networks in between.
+3. **Force encrypted connections.** On the same page, turn on HTTPS-Only Mode in all windows. The browser then warns you before any unencrypted page, so the networks in between cannot quietly downgrade a connection. You still rely on the certificate authorities described above.
 4. **Stop sending usage data.** Still on the same page, in the section about Firefox data collection, untick the boxes.
 5. **Change the search engine.** In Settings, Search, choose your new default. If it is not in the list, visit the search engine's site and add it from the address bar.
 6. **Install uBlock Origin** from the official add-ons site (addons.mozilla.org), and keep its default settings, which are good.

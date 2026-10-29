@@ -23,7 +23,7 @@ A slow rise is the stated goal. Since July 2021 the European Central Bank has ai
 | 20 years | 49% | 67% |
 | 50 years | 169% | 37% |
 
-This is the good scenario. In other periods inflation rises far above the target, and for October 2022 Eurostat measured [annual inflation of 10.6% in the euro area and 22.1% in Lithuania](https://ec.europa.eu/eurostat/documents/2995521/15265521/2-17112022-AP-EN.pdf/b6953137-786e-ed9c-5ee2-6812c0f8f07f).
+This is the good scenario. In other periods inflation rises far above the target, and for October 2022 Eurostat measured [annual inflation of 10.6% in the euro area](https://ec.europa.eu/eurostat/documents/2995521/15265521/2-17112022-AP-EN.pdf/b6953137-786e-ed9c-5ee2-6812c0f8f07f), and more than 20% in some member states.
 
 People who own property or shares are partly protected, because those prices tend to rise too, whereas employees, pensioners and anyone putting a little money aside each month are not. The people who decide how much money is created are also not the ones who bear this cost.
 
@@ -33,7 +33,7 @@ Cash was used for [52% of payments in shops in the euro area in 2024](https://ww
 
 The same is true of what you own. A bank balance, a share, a fund or a pension is an entry in the database of an intermediary that knows who you are, reports to the authorities and can refuse to serve you. Identity checks (KYC, "know your customer") stand at every entrance, and some of the passport copies they collect end up leaking.
 
-Central bank digital currencies (CBDCs) would place the issuer of the money in the payment path. On 30 October 2025 the ECB [moved the digital euro to its next phase](https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr251030~8c5b5beef0.en.html), with a pilot from mid-2027 and a possible first issuance in 2029, provided the EU regulation, still under negotiation as of September 2026, is adopted.
+Central bank digital currencies (CBDCs) would place the issuer of the money in the payment path. On 30 October 2025 the ECB [moved the digital euro to its next phase](https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr251030~8c5b5beef0.en.html), with a pilot from mid-2027 and a possible first issuance in 2029, provided the EU regulation is adopted. The European Parliament [approved its negotiating position on 9 July 2026](https://www.eunews.it/en/2026/07/09/digital-euro-parliament-says-yes-inter-institutional-negotiations-to-start-on-13-july/), and no final text had been adopted at the end of October 2026.
 
 ### No perfect asset
 
@@ -44,6 +44,8 @@ The useful question is therefore not "what is the best investment?", which this 
 ### A skill to learn with small amounts
 
 Start by knowing where you stand, then learn the skills that allow you to hold part of your savings yourself. They can be learned with very small amounts, as a skill to acquire and not as a bet to place. Your usual legal and tax obligations still apply.
+
+The legal and banking examples in this part are those of the European Union and the euro area. Each edition can replace them with the rules, the currency and the services of its own country.
 
 The 7 chapters of this part:
 
@@ -64,3 +66,4 @@ Chapter 12 gives the overall picture. Chapters 13 to 18 go deep on Bitcoin, beca
 - [Digital payments continue to rise, albeit at a slower pace; cash remains a key payment method](https://www.ecb.europa.eu/press/pr/date/2024/html/ecb.pr241219~172b929461.en.html), European Central Bank, 19 December 2024.
 - [Eurosystem moving to next phase of digital euro project](https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr251030~8c5b5beef0.en.html), European Central Bank, 30 October 2025.
 - [Deposit guarantee schemes, summary of Directive 2014/49/EU](https://eur-lex.europa.eu/EN/legal-content/summary/deposit-guarantee-schemes.html), EUR-Lex, consulted in September 2026.
+- [Digital euro: Parliament says yes, inter-institutional negotiations to start on 13 July](https://www.eunews.it/en/2026/07/09/digital-euro-parliament-says-yes-inter-institutional-negotiations-to-start-on-13-july/), Eunews, 9 July 2026, checked 29 October 2026.

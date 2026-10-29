@@ -1,0 +1,78 @@
+{
+ "about": "Édition française de la base, publiée avec l'édition anglaise (edition.json) sur le même site, sous /fr/. Même apparence neutre que l'édition anglaise ; texte dans content/fr/. Chaque clé est expliquée dans docs/CONFIGURATION.md, la publication des langues dans docs/TRANSLATING.md et docs/HOSTING.md.",
+
+ "edition": {
+  "name": "Édition communautaire",
+  "label": "",
+  "community": "votre communauté",
+  "community_url": "",
+  "contact": "",
+  "repository": "",
+  "wordmark": "",
+  "logo": {"file": "", "alt": ""},
+  "changes": "Traduction française de l'édition communautaire réutilisable de A Guide to Autonomy, à jour du texte anglais du 29 octobre 2026 (version 1.1.0 de la base et corrections du même jour).",
+  "modified": "2026-10-29"
+ },
+
+ "book": {
+  "title": "Guide de l'autonomie",
+  "title_lines": ["Guide", "de", "l'autonomie"],
+  "outlined_line": 1,
+  "kicker": "Un livre pour apprendre",
+  "intro": [
+   "Un livre pour tous sur l'autonomie personnelle et numérique, pour garder vos conversations et vos comptes privés, choisir les outils dont vous dépendez et détenir votre propre argent, Bitcoin compris.",
+   "Chaque chapitre part d'un besoin concret, explique en quoi un outil aide et où il atteint ses limites, puis vous guide pas à pas, avec les sources au plus près des passages qu'elles appuient."
+  ],
+  "start_chapter": "",
+  "start_paths": [
+   {"id": "path-accounts", "title": "Protéger mes comptes",
+    "text": "D'abord les mots de passe et la sécurité des comptes, puis votre email et vos alias.",
+    "chapters": ["passwords", "email"]},
+   {"id": "path-conversations", "title": "Protéger mes conversations et ma navigation",
+    "text": "Vos messageries, puis votre navigateur et vos recherches, puis votre réseau.",
+    "chapters": ["messages", "browser", "network"]},
+   {"id": "path-data", "title": "Reprendre la main sur mes données et mes appareils",
+    "text": "Des alternatives aux services des Big Tech, les réglages de votre téléphone, puis l'hébergement de vos propres services.",
+    "chapters": ["big-tech", "phone", "self-hosting"],
+    "deeper_title": "Pour approfondir", "deeper": ["keys", "nostr", "ai"]},
+   {"id": "path-bitcoin", "title": "Comprendre Bitcoin",
+    "text": "L'épargne, un premier wallet, la sauvegarde de la phrase de récupération, les paiements du quotidien, la confidentialité, les hardware wallets et votre propre nœud.",
+    "chapters": ["savings", "first-wallet", "seed", "lightning-and-euros", "bitcoin-privacy", "hardware-wallet", "node"]}
+  ],
+  "search_suggestions": ["passphrase", "Signal", "uBlock Origin", "SIM swap", "numéro de sécurité", "wallet"]
+ },
+
+ "language": {"code": "fr", "name": "Français", "direction": "ltr", "content_dir": "content/fr", "locale": "fr_FR"},
+ "other_editions": [
+  {"code": "en", "name": "English", "url": "https://mariusoffchain.github.io/guide-to-autonomy/"}
+ ],
+
+ "colors": {
+  "scheme": "light",
+  "background": "#fbfaf7",
+  "foreground": "#17171a",
+  "parts": [
+   {"accent": "#0f766e", "text": "#0b5e58"},
+   {"accent": "#4f46e5", "text": "#4338ca"},
+   {"accent": "#b45309", "text": "#92400e"}
+  ]
+ },
+
+ "fonts": {
+  "heading": {"family": "", "fallback": "system-ui, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif", "weight": "700", "files": []},
+  "body": {"family": "", "fallback": "system-ui, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif", "files": []}
+ },
+
+ "layout": {
+  "reading_width": "42rem",
+  "page_toc": true,
+  "uppercase_headings": true,
+  "cover_part_bars": true,
+  "show_progress": true,
+  "show_search": true
+ },
+
+ "site": {"url": "", "base_path": "/fr/", "offline": false, "sitemap": true, "og_image": "", "favicon": ""},
+ "storage_key": "guide-autonomy.fr.v1",
+ "directory": {"enabled": true, "file": "editions.json"}
+}

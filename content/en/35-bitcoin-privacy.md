@@ -2,7 +2,7 @@
 
 ## In brief
 
-Bitcoin does not hide its transaction graph at the base layer. Transactions remain public; identifying their owners depends on outside information and heuristics. An address, however, carries no name. It becomes tied to you through the identity check of an exchange, or through the people you transact with who know you, and from there an observer can link a wallet to a person. A few habits reduce this exposure considerably (fresh addresses, separate wallets, labelled coins, your own node, Lightning for everyday spending), and advanced tools such as coinjoin and payjoin go further. None of them changes your legal or tax obligations.
+Bitcoin does not hide its transaction graph at the base layer. Transactions remain public, and identifying their owners depends on outside information and heuristics. An address, however, carries no name. It becomes tied to you through the identity check of an exchange, or through the people you transact with who know you, and from there an observer can link a wallet to a person. A few habits reduce this exposure considerably (fresh addresses, separate wallets, labelled coins, your own node, Lightning for everyday spending), and advanced tools such as coinjoin and payjoin go further. None of them changes your legal or tax obligations.
 
 ## A public ledger that never forgets
 
@@ -34,7 +34,7 @@ Analysts combine these guesses, which are called heuristics. They are not always
 
 ## KYC and what it implies
 
-KYC means "know your customer", the identity verification that regulated exchanges must perform. You send a copy of your ID, often with a selfie and a proof of address. This is a legal duty for the company, and using such a service is perfectly normal.
+KYC means "know your customer", the identity verification that regulated exchanges must perform. You send a copy of your ID, often with a selfie and a proof of address. This is a legal duty for the company, and using such a service is legal and common.
 
 It does create a lasting link between your identity and your coins, stored in a company database. In the European Union, [the MiCA regulation](https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica) has applied to crypto-asset service providers since 30 December 2024, with a transition period that ended on 1 July 2026. Since 1 January 2026, [the DAC8 directive](https://taxation-customs.ec.europa.eu/taxation/tax-transparency-cooperation/administrative-co-operation-and-mutual-assistance/directive-administrative-cooperation-dac/dac8_en) also requires these providers to collect data on the transactions of their EU-resident users and to report it to the tax authorities, which exchange it between member states from 2027. Databases of this kind can leak, and a list of people who hold bitcoin, with home addresses, is of obvious interest to criminals.
 
@@ -48,7 +48,7 @@ The first is the server your wallet queries. A wallet that does not hold the led
 
 The second is the exchange that verified your identity, which knows your name, your home address and where you withdrew, and can be breached or ordered to hand over its records. In May 2025, Coinbase disclosed that customer data had been copied from its support systems, and [its filing counted 69,461 people](https://cointelegraph.com/news/70k-impacted-coinbase-data-breach-maine-attorneys). Analytics firms are observers, working from the public ledger and the data they obtain.
 
-Neither the server nor the exchange can be audited from outside, so the practical route is to remove them where it matters, with your own node, Tor in the meantime and peer-to-peer acquisition, each at the price of convenience. For a beginner, a regulated exchange often remains the safer choice.
+Neither the server nor the exchange can be audited from outside, so the practical route is to remove them where it matters, with your own node, Tor in the meantime and peer-to-peer acquisition, each at the price of convenience. For a beginner, a regulated exchange often remains safer against scams, at a lasting cost in privacy.
 
 ## Choose your privacy habits
 
@@ -56,8 +56,8 @@ Privacy in Bitcoin comes from a set of habits rather than from 1 tool. Each help
 
 | Habit | Tools | Effort | What you gain | Who still learns something |
 |---|---|---|---|---|
-| **Never reuse an address** | Any modern wallet gives a fresh address for every payment | None | Avoids the direct link created by receiving repeatedly on 1 address; later spending can still link payments | The server your wallet queries still sees all these addresses together |
-| **Separate wallets for separate purposes** | Any wallet: savings, spending, KYC coins, non-KYC coins | Low | Reduces accidental links between purposes; shared servers and later transactions can still connect them | The same server, if both wallets query it from the same IP address |
+| **Never reuse an address** | Any modern wallet gives a fresh address for every payment | None | Avoids the direct link created by receiving repeatedly on 1 address. Later spending can still link payments | The server your wallet queries still sees all these addresses together |
+| **Separate wallets for separate purposes** | Any wallet: savings, spending, KYC coins, non-KYC coins | Low | Reduces accidental links between purposes. Shared servers and later transactions can still connect them | The same server, if both wallets query it from the same IP address |
 | **Label your coins and use coin control** | Sparrow Wallet, Nunchuk, Electrum (all open source) | Medium | You decide which coin pays, and you avoid merging coins by accident | Nobody new, since labels stay in your wallet file. Back that file up |
 | **Connect to your own node** | See chapter 18 | High (a weekend of work, then a few days of synchronisation) | No outside server learns which addresses are yours | Nobody for your balance. Other nodes see the transaction you broadcast, unless your node uses Tor |
 | **Use Lightning for everyday spending** | See chapter 15 | Low | Individual payments are not written on the public ledger | A custodial wallet sees every payment. A self-custodial app's service provider (LSP) still sees part of them |
@@ -88,9 +88,9 @@ These cases explain why coordinators close or refuse users from some countries, 
 
 Some advanced users keep bitcoin as the asset they hold for the long term, and swap a small amount into Monero when they want a payment that is less likely to be linked to their identity. Monero is a separate currency with a similar purpose, money you can hold yourself, where amounts, senders and receivers are hidden by default, which is its real strength.
 
-It is however less secure as a place to keep value, because it is much less liquid and much less accepted, its client software is developed by a smaller, more centralised group, and its much smaller network is easier for an outside entity to attack. In 2025 the Qubic mining pool claimed a majority of its mining power, and on 14 September a [reorganisation of 18 blocks cancelled 118 confirmed transactions](https://www.coindesk.com/web3/2025/09/15/monero-suffers-deepest-ever-blockchain-reorganization-invalidating-118-transactions). Qubic is a small project run by a small group of people, which leaves open the question of what a government, or any better organised and better funded group, could do to the same network.
+It is however less secure as a place to keep value, because it is much less liquid and much less accepted, its client software is developed by a smaller, more centralised group, and its much smaller network is easier for an outside entity to attack. In September 2025 a small mining pool, Qubic, [cancelled 118 confirmed transactions](https://www.coindesk.com/web3/2025/09/15/monero-suffers-deepest-ever-blockchain-reorganization-invalidating-118-transactions) with a reorganisation of 18 blocks (chapter 12).
 
-Swaps are done with non-custodial atomic swap software such as eigenwallet, or on peer-to-peer markets such as Bisq, since regulated platforms in Europe are removing Monero. The [EU anti-money-laundering regulation of 2024](https://eur-lex.europa.eu/eli/reg/2024/1624/oj) bars them, from 10 July 2027, from keeping accounts that use "anonymity-enhancing coins". Instant swap websites also exist, but they hold your coins during the swap. Legal and tax obligations still apply, and in many countries a swap is a taxable event. Chapter 12 compares the 2.
+Swaps are done with non-custodial atomic swap software such as eigenwallet, or on peer-to-peer markets such as Bisq, since regulated platforms in Europe are removing Monero. The [EU anti-money-laundering regulation of 2024](https://eur-lex.europa.eu/eli/reg/2024/1624/oj) bars them, from 10 July 2027, from keeping accounts that use "anonymity-enhancing coins". Instant swap websites also exist, but they hold your coins during the swap. Legal and tax obligations still apply, and in many countries a swap is a taxable event. Chapter 12 compares Bitcoin and Monero as places to keep value.
 
 ## Step by step
 
@@ -98,7 +98,7 @@ The example uses Sparrow Wallet on a computer. Nunchuk and Electrum offer the sa
 
 1. **Create 1 wallet per purpose.** For example savings, spending, and a separate wallet for coins that came from an exchange with identity verification.
 2. **Receive on a fresh address every time.** The Receive screen offers a new one automatically. Never copy an old address from your history.
-3. **Label every payment when it arrives.** Write where it came from, for example "exchange, March" or "sold my bike to Tomas". In 6 months you will not remember.
+3. **Label every payment when it arrives.** Write where it came from, for example "exchange, March" or "sold my bike to a neighbour". In 6 months you will not remember.
 4. **Choose which coin pays.** Before sending, open the list of your coins (Sparrow calls it UTXOs), select the one that fits, and send from it. Avoid combining coins from different sources.
 5. **Label the change.** The coin that comes back to you inherits the history of the payment, so note it.
 6. **Pay small things over Lightning** (chapter 15), and keep on-chain transactions for larger, rarer movements.
@@ -125,7 +125,7 @@ The example uses Sparrow Wallet on a computer. Nunchuk and Electrum offer the sa
 - [Protect your privacy](https://bitcoin.org/en/protect-your-privacy), Bitcoin.org, checked 22 October 2026.
 - [DAC8, the directive on the reporting of crypto-asset transactions](https://taxation-customs.ec.europa.eu/taxation/tax-transparency-cooperation/administrative-co-operation-and-mutual-assistance/directive-administrative-cooperation-dac/dac8_en), European Commission, applicable since 1 January 2026.
 - [Markets in Crypto-Assets Regulation (MiCA)](https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica), European Securities and Markets Authority, page consulted in September 2026.
-- [Regulation (EU) 2024/1624 on the prevention of money laundering](https://eur-lex.europa.eu/eli/reg/2024/1624/oj), Official Journal of the European Union, 19 June 2024.
+- [Regulation (EU) 2024/1624 on the prevention of money laundering](https://eur-lex.europa.eu/eli/reg/2024/1624/oj), adopted on 31 May 2024 and published in the Official Journal of the European Union on 19 June 2024.
 - [Monero Suffers Deepest-Ever Blockchain Reorganization, Invalidating 118 Transactions](https://www.coindesk.com/web3/2025/09/15/monero-suffers-deepest-ever-blockchain-reorganization-invalidating-118-transactions), CoinDesk, 15 September 2025.
 - [Notveräußerung von fast 50.000 Bitcoins abgeschlossen](https://www.medienservice.sachsen.de/medien/news/1077662), Generalstaatsanwaltschaft Dresden, Free State of Saxony, 16 July 2024 (in German).
 - [German gov't $354M BTC sell-off](https://cointelegraph.com/news/german-government-354m-btc-sell-off), Cointelegraph, 10 July 2024.

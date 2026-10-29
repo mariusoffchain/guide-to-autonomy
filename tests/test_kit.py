@@ -87,6 +87,17 @@ class ReferenceIds(unittest.TestCase):
         self.assertEqual([c['id'] for c in content.chapters], ref['chapters'])
         self.assertEqual([[c['id'], a['id']] for c in content.chapters for a in c['actions']], ref['actions'])
 
+    def test_language_editions_keep_the_same_ids(self):
+        """A language edition of the base (languages/<code>/edition.json) uses the same chapter and action ids."""
+        path = ROOT / 'tests' / 'reference-ids.json'
+        if not path.is_file():
+            self.skipTest('no tests/reference-ids.json in this edition')
+        ref = json.loads(path.read_text(encoding='utf-8'))
+        for edition in sorted((ROOT / 'languages').glob('*/edition.json')):
+            content = build.Content(build.load_config(edition)[0])
+            self.assertEqual([c['id'] for c in content.chapters], ref['chapters'], edition)
+            self.assertEqual([[c['id'], a['id']] for c in content.chapters for a in c['actions']], ref['actions'], edition)
+
 
 @unittest.skipIf(build is None, 'Python-Markdown is not installed')
 class Editions(unittest.TestCase):

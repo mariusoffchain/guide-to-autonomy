@@ -56,7 +56,7 @@ import release  # noqa: E402  (source archive and notices, next to this file)
 
 THEME = ROOT / 'theme'
 # Version of the base (generator, theme and reference text). Each release is described in CHANGELOG.md.
-VERSION = '1.1.0'
+VERSION = '1.2.0'
 # The original work, credited in every edition whatever its own name and branding.
 ORIGINAL = {'title': 'A Guide to Autonomy', 'project': 'PROOF', 'initiative': 'Cypher Baltics',
             'url': 'https://proofconference.com/book/en/'}

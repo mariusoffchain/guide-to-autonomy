@@ -2,6 +2,39 @@
 
 What changed in each version of the base, for the people who maintain an edition. Versions follow `MAJOR.MINOR.PATCH`: a patch fixes, a minor version adds without breaking an edition, a major version may need changes in editions (always listed under "Needs your attention"). Each version has a Git tag `v<version>`. How to take an update: [docs/UPDATING.md](docs/UPDATING.md).
 
+## 1.2.0, 2026-10-29
+
+A full review of the text. Facts that had moved since September 2026 were checked again on 29 October 2026 and updated with their sources, beginners get the backup steps that were missing, and the base says openly that it is written for the European Union.
+
+### Book
+
+- **Updated facts.** Chat Control (Council position of November 2025, 6th trilogue on 29 September 2026, interim Regulation (EU) 2026/1881 until 3 April 2028). Session's protocol upgrade on hold and Threema's new owner. KeePassXC's certification version. Siri app in iOS 27, llama.cpp team at Hugging Face, Locally AI bought by LM Studio, Venice paid modes. StartOS 0.4.0 (Tor optional, old backups not restorable) and umbrelOS Tor access. Android developer verification in force since 30 September 2026. Mt. Gox repayments postponed again, without a deadline in the text. Boltz suspension and its effect on the Blockstream app. Digital euro mandate of the European Parliament. Bisq 1 and Bisq Easy told apart: Bisq Easy has no escrow.
+- **Safety steps added.** Signal backups with their recovery key, and the Signal PIN kept in the password manager. The password manager's own recovery code never only inside it. Both paper copies replaced after regenerating recovery codes. Backup passwords and the Advanced Data Protection key on paper. What an Ark balance expiry means. A warning against Bitcoin ATM scams. An inheritance letter that never contains the words.
+- **Chapter 17** adds COLDCARD to the table of devices, with the July 2026 seed-generation flaw and its licence.
+- **A European base, said openly.** Part 3 states that its legal and banking examples are those of the EU and the euro area. The remaining Lithuanian and regional references are gone, and the introduction no longer assumes the reader comes from a talk. Chapter 15 uses a generic Lightning walkthrough.
+- **Glossary.** 25 new terms (MiCA, DAC8, BIP39, SLIP39, passphrase, multisig, xpub and output descriptor, air-gapped, secure element, reproducible build, payment channel, Lightning invoice, Lightning address, LSP, swap, Liquid, Spark, Ark, UTXO, change, coin control, coinjoin, payjoin, pruned node, Electrum server) and a neutral CBDC definition.
+- **Style.** Sentences patched with semicolons are rewritten as short sentences. Repeated formulas are gone. 1 unsourced sentence and the FreeAI Manifesto entry are removed.
+
+### French
+
+- **The book in French joins the base**: `content/fr/` (23 texts, interface, 90 actions with the same ids) and `languages/fr/edition.json`. It follows this version of the English text, with the same neutral identity. The base site publishes it under `/fr/`, and a language button links the 2 editions.
+
+### Editions
+
+- The base edition shows the "Other editions" page, with the PROOF edition, the original one, as its first entry. The README links to it under "See it live".
+- `docs/CUSTOMIZING.md` lists the passages to adapt outside the European Union.
+- Theme: the progress line of a checklist keeps its spaces, a long community name on the cover breaks between syllables instead of between letters, and the "Other editions" page no longer overflows on a phone.
+
+### Building and publishing
+
+- The GitHub Pages workflow also builds every `languages/<code>/edition.json` into `<code>/` of the same site (input `languages`, on by default), and the checks run `--check` on each of them. A test makes sure every language keeps the reference ids. See `docs/TRANSLATING.md` and `docs/HOSTING.md`.
+
+### Needs your attention
+
+- 4 actions are reworded, with the same ids, so readers' ticks are kept: `passwords-5`, `nostr-first-zap`, `seed-delete-digital-copies`, `seed-test-recovery`. Their former wording is in `previous_texts`. If you translated them, update your translation.
+- The base `edition.json` now has `directory.enabled: true` and links to the French edition in `other_editions`. When you merge, keep your own values for these 2 keys.
+- `languages/fr/` is built by the Pages workflow with the address of the base site in its `other_editions`. Adapt it to your own address, or remove the folder if your edition has no French version (`AGENTS.md`, step 4).
+
 ## 1.1.0, 2026-10-29
 
 A neutral base: nothing in the pages of an edition names the original event any more, apart from the credit on the page "Licences, credits and source".

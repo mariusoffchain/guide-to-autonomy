@@ -20,7 +20,7 @@ Nostr is a protocol, like email or the web, which means that no company owns it 
 - **Everything you publish is a signed event.** A post, a photo, a long article, a product listing or the announcement of a live stream carries a signature made with your nsec, so anyone can check that it is really yours and was not modified.
 - **Zaps** are small Lightning payments (Part 3) sent directly to a person or a post. They allow you to support someone without advertising and without a platform taking a share.
 
-To see where relays and clients fit, think of everything people publish as what happens outside, in nature. **Relays** are what records and keeps what happens out there. They are simple servers that anyone can run, and you publish to several at once. A **client** is a window onto it, and windows differ. Some show almost everything, others filter or hide part of the view, and a window can be shut or even boarded up while others stay open. You can always walk to another window, because the landscape does not belong to any of them, and a new client can retrieve your signed profile, posts and contact lists from the relays that still hold them. Keep local exports of important content; relays and media hosts do not promise permanent storage.
+To see where relays and clients fit, think of everything people publish as what happens outside, in nature. **Relays** record and keep what happens out there. They are simple servers that anyone can run, and you publish to several at once. A **client** is a window onto it, and windows differ. Some show almost everything, others filter or hide part of the view, and a window can be shut or even boarded up while others stay open. You can always walk to another window, because the landscape does not belong to any of them, and a new client can retrieve your signed profile, posts and contact lists from the relays that still hold them. Keep local exports of important content; relays and media hosts do not promise permanent storage.
 
 In February 2023, Apple [pulled the Damus client from its App Store in China](https://techcrunch.com/2023/02/02/damus-pulled-from-apples-app-store-in-china-after-two-days/) 2 days after its launch, at the request of the Chinese internet regulator. That window was boarded up for 1 country, while the relays and the other clients kept working.
 
@@ -119,4 +119,4 @@ The example uses a mobile client, and the logic is the same in all of them.
 - [ ] Back up your nsec on paper or in your password manager (5 min)
 - [ ] Fill your profile and follow a few people you already know (5 min)
 - [ ] Install a signer and log in to a second client through it (5 min)
-- [ ] Add a Lightning address to your profile and send your first zap (1 hour)
+- [ ] Once you have a Lightning wallet (chapters 13 and 15), add a Lightning address to your profile and send your first zap (1 hour)

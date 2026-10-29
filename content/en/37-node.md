@@ -18,7 +18,7 @@ A **node** is a computer running Bitcoin software, most often Bitcoin Core (othe
 
 Your node accepts only what follows the rules it runs. When thousands of people do the same, a company, a miner or a government that wanted different rules would first have to convince them to install different software.
 
-A node is not a miner. It uses little electricity, earns nothing, and need not hold private keys. In the verification-only setup here, they stay in a separate wallet or signing device. Bitcoin Core can also run a wallet; if you use that feature, its wallet backups matter too.
+A node is not a miner. It uses little electricity, earns nothing, and need not hold private keys. In the verification-only setup here, they stay in a separate wallet or signing device. Bitcoin Core can also run a wallet. If you use that feature, back up that wallet too.
 
 It needs a small computer that stays on, a normal home connection and a 2 TB SSD. As of September 2026 the ledger weighs [about 770 GB](https://www.blockchain.com/explorer/charts/blocks-size) and [grows by 5 to 10 GB per month](https://bitcoincore.org/en/download/), and the index of an Electrum server adds from a few dozen to more than 100 GB, which would almost fill a 1 TB disk.
 
@@ -34,7 +34,7 @@ The price is a disk, a weekend and some maintenance, and for small amounts a pub
 
 All routes run the same Bitcoin software underneath, and they differ in how much is done for you.
 
-On an everyday computer, a **pruned node** is the lighter option. It verifies everything but keeps only the most recent blocks, so storage can be around 10 GB at a low pruning target, plus room for growth and other files. It still downloads and validates the full history; pruning does not remove that initial bandwidth requirement. However, most wallet server software needs the full ledger, which is why a dedicated node keeps it.
+On an everyday computer, a **pruned node** is the lighter option. It verifies everything but keeps only the most recent blocks, so storage can be around 10 GB at a low pruning target, plus room for growth and other files. It still downloads and checks the full history, so pruning does not shorten the first download. However, most wallet server software needs the full ledger, which is why a dedicated node keeps it.
 
 | Route | What it is | Strengths | Trade-offs | Who you still trust |
 |---|---|---|---|---|
@@ -45,7 +45,7 @@ On an everyday computer, a **pruned node** is the lighter option. It verifies ev
 | **MyNode** | A node system for small computers, with a free community edition and a paid premium edition | Simple web interface, many Bitcoin apps | Made by a small company, some features reserved for the paid edition | MyNode as well, for the system, the apps it packages and its updates |
 | **The manual route** | Debian or Ubuntu Linux, then Bitcoin Core, then an Electrum server (electrs or Fulcrum), by following a guide | You understand every part. Nothing hidden, fully open source | Slow, command line only. For learners who enjoy it | Only the software whose signatures you check yourself, the authors of your guide, and your hardware |
 
-Umbrel and Start9 are also general home servers, which connects with chapter 10, since the same box can host your files and your passwords.
+Umbrel and Start9 are also general home servers, which connects with chapter 10, since the same box can host your files and your photos.
 
 A reasonable setup for most people is to try Bitcoin Core on your computer, in pruned mode, to see what a node is, then to move to a dedicated small computer with the platform whose trade-offs suit you.
 
@@ -59,10 +59,10 @@ The example uses a platform with an app store, such as Umbrel or StartOS. RaspiB
 
 1. **Choose the hardware.** A used mini PC or a recent Raspberry Pi with 8 GB of memory, a 2 TB SSD from a known brand, and a network cable to your router.
 2. **Install the platform** by following its official guide, from an image downloaded on its official website, and set a strong, unique password (chapter 2). Where the project publishes a checksum or a signature for that image, as [Start9](https://docs.start9.com/start-os/0.4.0.x/installing-startos.html) and [RaspiBlitz](https://docs.raspiblitz.org/docs/faq) do, check it before you write the image to the disk. This is the step that replaces trust in the download with verification.
-3. **Install the Bitcoin app and let it synchronise.** It takes a few days, and up to a week on slow hardware such as a Raspberry Pi. Leave it running when practical. If you need to stop, shut it down cleanly from the interface and let synchronisation resume later; do not cut the power.
+3. **Install the Bitcoin app and let it synchronise.** It takes a few days, and up to a week on slow hardware such as a Raspberry Pi. Leave it running when practical. If you need to stop, shut it down cleanly from the interface and let synchronisation resume later. Do not cut the power.
 4. **Install an Electrum server app** (electrs or Fulcrum). It builds an index so that wallets can ask your node questions, which takes several more hours, sometimes a full day.
 5. **Connect your wallet.** In Sparrow, BlueWallet or Nunchuk, open the server or network settings and enter the address of your own Electrum server instead of the public one. From this step on, your wallet shows what your own node verified, and no longer what a third party told it. Zeus works differently, because it connects to a Lightning node, which is for later.
-6. **Reach it from outside your home** over Tor or a private VPN (see chapter 10). The platforms provide a Tor address for this.
+6. **Reach it from outside your home** over Tor or a private VPN (see chapter 10). umbrelOS and StartOS offer Tor access as an option.
 7. **Keep it updated,** and keep your seed backups separate from the node. A verification-only node needs no seed and should never see one. If you enable Bitcoin Core's wallet or install Lightning, protect and back up those wallets separately.
 
 ## Mistakes to avoid

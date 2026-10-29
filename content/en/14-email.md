@@ -38,7 +38,7 @@ All the options below are funded by their users and not by advertising. They dif
 | **[Tuta](https://tuta.com/)** | Germany | Tuta sees ordinary incoming mail before encrypting it, and supplies your contacts' keys. Key verification is optional. | Free tier, paid plans | Mailbox always encrypted. Open-source apps, encrypts subject lines too. Uses its own encryption system, so no ordinary mail apps and no PGP (the older standard for encrypting email). |
 | **[Mailbox.org](https://mailbox.org/en/)** | Germany | Mailbox.org can read stored mail until you turn on inbox encryption. With PGP, you verify keys yourself. | Paid, low price | Classic mailbox that works with any mail app. Encryption of your inbox (with PGP) is optional, and you switch it on yourself. Less polished on mobile. |
 | **[Posteo](https://posteo.de/en)** | Germany | Posteo can read stored mail until you turn on encryption. With PGP, you verify keys yourself. | Paid, low price | Works with any mail app, can be paid anonymously, including cash by post. Encryption of your stored mail is optional, and you switch it on yourself. Does not support your own domain. |
-| **Your own domain** | Wherever you host it | The same provider for content, plus your domain registrar. No provider can keep your address. | Yearly domain fee plus a paid mailbox | you@your-name.lt, hosted at one of the providers above. You can change provider later without changing address. You must never forget to renew the domain. |
+| **Your own domain** | Wherever you host it | The same provider for content, plus your domain registrar. No provider can keep your address. | Yearly domain fee plus a paid mailbox | you@your-name.eu, hosted at one of the providers above. You can change provider later without changing address. You must never forget to renew the domain. |
 
 A reasonable setup for most people is 1 mailbox from this list, with encryption switched on where it is optional, plus an alias service. If you plan to keep the same address for the next 20 years, consider your own domain from the start.
 
@@ -76,7 +76,7 @@ Your phone number is an even stronger identifier than your email address. You ke
 
 | Option | How it works | Trade-offs |
 |---|---|---|
-| **A second SIM or eSIM, used only for sign-ups** | A real mobile number from an ordinary operator, kept apart from your personal one | Accepted everywhere. Prepaid numbers expire if you do not top them up. Many EU countries require an identity document to buy a SIM, including [Lithuania for new prepaid cards since January 2025](https://www.lrt.lt/en/news-in-english/19/2412964/end-to-anonymity-lithuania-to-require-users-to-register-phone-sim-cards). The rules vary, and this option separates your numbers without making you anonymous. |
+| **A second SIM or eSIM, used only for sign-ups** | A real mobile number from an ordinary operator, kept apart from your personal one | Accepted everywhere. Prepaid numbers expire if you do not top them up. In 2025, [19 of the 28 European countries studied by Cullen International](https://www.cullen-international.com/news/2025/10/19-EU-countries-mandate-the-registration-of-prepaid-customers.html) required operators to register the identity of prepaid customers. The rules vary, and this option separates your numbers without making you anonymous. |
 | **Virtual (VoIP) number apps:** [JMP.chat](https://jmp.chat/), [Hushed](https://hushed.com/), [MySudo](https://mysudo.com/) | A paid number that works over the internet, inside an app | JMP.chat is open source but offers only US and Canadian numbers. Hushed (closed source) offers US, Canadian and UK numbers. MySudo (closed source) can be installed in only a few countries, so check before you count on it. Many services refuse VoIP numbers, and a European site may refuse a foreign one. |
 | **A data eSIM paid in bitcoin,** for example [Silent.link](https://silent.link/) | No account. Some plans include a US or UK mobile number that can receive SMS | Costs more than an ordinary SIM. The number is leased by the year, and it is gone if you do not renew it. A single small operator. |
 | **Paid one-time SMS reception services** | You rent a number for a few minutes to receive a single code | The number then goes to someone else, who could use it to take over the account. Quality varies widely, and many sites forbid this in their terms. |
@@ -88,7 +88,7 @@ These options have limits too. If you lose access to the number, you can lose th
 
 The example uses Proton Mail for the mailbox and SimpleLogin for the aliases, because they are a common first step. Both belong to Proton, which is convenient but means your mailbox and your aliases depend on a single company. If you prefer to spread the risk, keep the mailbox and choose addy.io for the aliases, or keep SimpleLogin and choose another mailbox, since the steps are the same.
 
-1. **Open the new mailbox.** Choose an address you can keep for years. Protect it with a long, unique password from your password manager and a second factor (chapter 2). Enable the recovery phrase and write it on paper. It can restore both access and encrypted data; an email or SMS password reset alone cannot decrypt your old mail. Check the provider's recovery instructions before you rely on it.
+1. **Open the new mailbox.** Choose an address you can keep for years. Protect it with a long, unique password from your password manager and a second factor (chapter 2). Enable the recovery phrase and write it on paper. It restores both your access and your encrypted mail. A reset by email or SMS only gives back access, and your old messages may stay unreadable. Check [the provider's recovery instructions](https://proton.me/support/set-account-recovery-methods) before you rely on it.
 2. **Set up the alias service.** Create the account, connect it to your new mailbox, and install its browser extension (and its phone app, if it has one).
 3. **Move your most important accounts first.** These are your bank, government services, your phone operator, your Apple or Google account and your password manager. Change the email address in each of them. Use your real new address or a dedicated alias, as you prefer, but note your choice in your password manager.
 4. **Forward the old mailbox.** In the settings of your old mailbox, turn on automatic forwarding to the new one. Most encrypted providers also offer an import tool that copies your old messages and contacts.
@@ -100,7 +100,7 @@ The example uses Proton Mail for the mailbox and SimpleLogin for the aliases, be
 
 - **Thinking an encrypted provider makes all your email private.** It protects your mailbox, while a message sent to an ordinary mailbox stays readable at the other end.
 - **Deleting the old address too early.** Some providers recycle abandoned addresses, and a stranger could then receive the password resets of accounts you forgot.
-- **Losing the recovery phrase.** A password reset alone may leave your old messages unreadable. Set up and protect a data recovery method in advance; Proton supports a recovery phrase and other methods.
+- **Losing the recovery phrase.** Without it, a forgotten password can cost you your old messages (step 1).
 - **Letting your own domain expire.** Whoever registers it after you receives your mail and can reset your accounts. Turn on automatic renewal and keep the payment card up to date.
 - **Using the same alias for everything.** An alias shared between 10 services is just a second real address, since the value comes from having a different alias for each service.
 - **Putting the bank behind an alias service you do not fully trust.** For the few accounts that matter most, your real address at your own provider is a perfectly good choice.
@@ -119,7 +119,7 @@ The example uses Proton Mail for the mailbox and SimpleLogin for the aliases, be
 - [Important clarifications regarding arrest of climate activist](https://proton.me/blog/climate-activist-arrest), Proton, 6 September 2021.
 - [Address verification with trusted keys](https://proton.me/support/address-verification), Proton, consulted in September 2026.
 - [Tuta introduces key verification](https://tuta.com/blog/key-verification), Tuta, 26 August 2025.
-- [End to anonymity: Lithuania to require users to register phone SIM cards](https://www.lrt.lt/en/news-in-english/19/2412964/end-to-anonymity-lithuania-to-require-users-to-register-phone-sim-cards), LRT, 14 November 2024.
+- [19 EU countries mandate the registration of prepaid customers](https://www.cullen-international.com/news/2025/10/19-EU-countries-mandate-the-registration-of-prepaid-customers.html), Cullen International, 8 October 2025, checked 29 October 2026.
 
 ## Your checklist
 

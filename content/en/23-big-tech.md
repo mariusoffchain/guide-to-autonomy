@@ -24,7 +24,7 @@ The method rests on 3 ideas.
 
 **Run both in parallel.** Use the new tool for 2 weeks while the old one still exists, and move the data and delete it there only once you have stopped opening the old one.
 
-Then repeat. 4 services a year is a very good pace.
+Then repeat. 1 new service every 1 or 2 months is a very good pace.
 
 ## A privacy brand is still 1 company
 

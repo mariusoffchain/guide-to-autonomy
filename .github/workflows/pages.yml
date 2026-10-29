@@ -3,6 +3,8 @@
 # Before the first run: Settings > Pages > Build and deployment > Source: "GitHub Actions".
 # No secret is needed. release.py builds into dist/ and copies only the files of that build
 # (release-manifest.json) into publish/; only publish/ is uploaded. See docs/HOSTING.md.
+# Language editions (languages/<code>/edition.json, for example the French edition in languages/fr/)
+# are built into the same upload, each in publish/<code>/, so they are served under <address>/<code>/.
 name: Build and publish the edition
 
 on:
@@ -19,6 +21,10 @@ on:
         options:
           - "github-pages"
           - "edition.json"
+      languages:
+        description: "Also build every languages/<code>/edition.json, each under <address>/<code>/"
+        type: boolean
+        default: true
 
 permissions:
   contents: read
@@ -46,17 +52,37 @@ jobs:
       # "github-pages": the address GitHub gives this site (https://<user>.github.io/<repository>/, or the
       # custom domain set in Settings > Pages), so the first publication is already correct.
       # "edition.json": site.url and site.base_path of the edition file, unchanged.
+      # Each language edition gets the same address followed by its folder name ("github-pages"), or its own
+      # site.url and site.base_path ("edition.json", so set base_path to "/<code>/" in that file).
       - name: Build and export
         env:
           EDITION: ${{ inputs.edition }}
           ADDRESS: ${{ inputs.address }}
+          LANGUAGES: ${{ inputs.languages }}
           PAGES_ORIGIN: ${{ steps.pages.outputs.origin }}
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: |
+          base="${PAGES_BASE_PATH:-/}"
+          base="${base%/}/"
           if [ "$ADDRESS" = "github-pages" ]; then
-            python3 release.py --edition "$EDITION" --out dist --dest publish --site-url "$PAGES_ORIGIN" --base-path "${PAGES_BASE_PATH:-/}"
+            python3 release.py --edition "$EDITION" --out dist --dest publish --site-url "$PAGES_ORIGIN" --base-path "$base"
           else
             python3 release.py --edition "$EDITION" --out dist --dest publish
+          fi
+          if [ "$LANGUAGES" = "true" ]; then
+            for file in languages/*/edition.json; do
+              [ -f "$file" ] || continue
+              code="$(basename "$(dirname "$file")")"
+              if [ -e "publish/$code" ]; then
+                echo "::error::publish/$code already exists in the main edition: rename the folder languages/$code."
+                exit 1
+              fi
+              if [ "$ADDRESS" = "github-pages" ]; then
+                python3 release.py --edition "$file" --out "dist-$code" --dest "publish/$code" --site-url "$PAGES_ORIGIN" --base-path "$base$code/"
+              else
+                python3 release.py --edition "$file" --out "dist-$code" --dest "publish/$code"
+              fi
+            done
           fi
       - uses: actions/upload-pages-artifact@v5
         with:

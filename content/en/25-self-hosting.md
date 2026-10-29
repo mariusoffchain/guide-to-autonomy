@@ -18,7 +18,7 @@ It is not free, however. You pay for the hardware, the electricity and an off-si
 
 A server is only a computer that stays on and answers requests from other devices, and a household does not need a data centre for that. An old laptop, a small mini PC or a Raspberry Pi is enough. A mini PC or a laptop with an SSD is usually the most comfortable start, and on a Raspberry Pi an SSD is preferable to a memory card, because cards tend to wear out quickly.
 
-On that computer you install a **platform**, a system that gives you a web page with an app store. You open it from your browser, click "install" on Nextcloud or Immich, and the platform installs and manages the app. Some platforms use containers to isolate apps, but Linux containers share the host kernel and their security depends on configuration; they are not sealed security boxes.
+On that computer you install a **platform**, a system that gives you a web page with an app store. You open it from your browser, click "install" on Nextcloud or Immich, and the platform installs and manages the app. Some platforms use containers, which keep apps apart from each other. The separation is weaker than between 2 computers, because all containers share the same system core, so a container is not a sealed security box.
 
 Your phone and laptop then talk to this box instead of talking to a company. At home this happens over your own wifi, and from outside you need a safe way in, which has its own section below.
 
@@ -36,7 +36,7 @@ All of these are made for people who are not system administrators, and they dif
 
 | Platform | Made by | Strength | Trade-off | Who controls apps and updates |
 |---|---|---|---|---|
-| **Start9 (StartOS)** | A single company, which also sells servers | Open source. Built around sovereignty, with Tor by default and encrypted backups built in | Smaller app catalogue, a little more to learn | Start9 for the system. 2 default registries, [others can be added](https://docs.start9.com/start-os/0.4.0.x/marketplace.html), and packages installed by hand |
+| **Start9 (StartOS)** | A single company, which also sells servers | Open source. Built around sovereignty. Encrypted backups and WireGuard access are built in, and Tor is an [optional plugin](https://github.com/Start9Labs/start-technologies/releases/tag/start-os%2Fv0.4.0) | Smaller app catalogue, a little more to learn | Start9 for the system. 2 default registries, [others can be added](https://docs.start9.com/start-os/0.4.0.x/marketplace.html), and packages installed by hand |
 | **YunoHost** | A volunteer community, non-profit | Open source, based on Debian, many apps, a single login for all of them | Designed for services reachable from the internet, so domains and email appear early. Plainer interface | Volunteers maintain the system and the catalogue. Any app can also be [installed from a URL](https://doc.yunohost.org/en/admin/apps/custom_apps/) |
 | **Umbrel (umbrelOS)** | A single company, which also sells its own hardware | The most polished interface, large app store, strong Bitcoin and Lightning apps | The code is public, but the licence is not a true open-source licence (no commercial use) | Umbrel for the system and the official store. [Community app stores](https://umbrel.com/support/apps/how-to-add-a-community-app-store) can be added, without review by Umbrel |
 | **CasaOS** | A single company (IceWhale) | Open source. A simple layer you add on top of an existing Linux system | In maintenance mode as of September 2026, because the company now focuses on its newer ZimaOS. No built-in backups | IceWhale for the layer and its store, which accepts other app sources. Your Linux distribution for the system |
@@ -64,7 +64,7 @@ The classic mistake is to open a port on purpose so that your files are reachabl
 Safer options, from most independent to most convenient:
 
 - **A WireGuard VPN into your home.** Your phone opens an encrypted tunnel to your own network and behaves as if it were at home. Open source, nobody in the middle. It needs some router configuration, and CGNAT (a public address shared by several customers) can prevent a direct inbound connection unless you arrange another reachable endpoint or working IPv6. The 2 options below are often easier in that situation.
-- **Tor onion services.** Umbrel and Start9 have this built in, so your server gets a private .onion address reachable through Tor, with no open port. Slower, but simple and private.
+- **Tor onion services.** umbrelOS offers this as an option in its settings, and StartOS as an optional plugin, so your server gets a private .onion address reachable through Tor, with no open port. Slower, but simple and private.
 - **Tailscale.** Built on WireGuard and very easy to install on the server and on your phone. Your traffic stays encrypted between your devices, but a company coordinates the connections and the accounts. **Headscale** is an open-source replacement for that coordination part, which you host yourself.
 
 Whatever you choose, change every default password first.
@@ -73,13 +73,13 @@ Whatever you choose, change every default password first.
 
 The example uses StartOS because it is open source and installs on ordinary hardware. The logic is the same on YunoHost and umbrelOS.
 
-1. **Pick the hardware.** An unused laptop or a mini PC with 8 GB of memory and an SSD is plenty. Connect it to your router with a cable, not wifi.
+1. **Pick the hardware.** An unused laptop or a mini PC with 8 GB of memory and an SSD is plenty for files and photos. A Bitcoin node needs a 2 TB SSD (chapter 18), and a local AI model for the family needs more memory (chapter 11). Connect it to your router with a cable, not wifi.
 2. **Install the platform.** Download the image from the project's website, write it to a USB stick, start the computer from it and follow the installer. When the project publishes a checksum (a fingerprint of the file), as Start9 does on its release page, compare it before you write the image, because this is the step that replaces trust in the download with verification. This erases the computer's disk.
 3. **Create your account.** Open the address shown at the end of the installation from another device on the same network. Choose a long, unique password and store it in your password manager. If the platform offers two-factor authentication, as umbrelOS does in its settings, turn it on.
 4. **Install 1 app.** Only 1. Nextcloud or Immich is a good start, so install the phone app, enter your server's address, and let it copy your photos.
-5. **Set up backups.** Follow the 3-2-1 rule, which means 3 copies of your data, on 2 different devices, with 1 copy in another place. In practice that is the server, a second disk and an encrypted copy off-site (a disk at a relative's home, or an encrypted cloud backup). StartOS writes encrypted backups to an external disk or a network folder, and umbrelOS can [run them automatically every hour](https://umbrel.com/support/backups-and-recovery/backing-up-your-data). If your platform does not schedule them, add a recurring reminder to your calendar.
+5. **Set up backups.** Follow the 3-2-1 rule, which means 3 copies of your data, on 2 different devices, with 1 copy in another place. In practice that is the server, a second disk and an encrypted copy off-site (a disk at a relative's home, or an encrypted cloud backup). Store the backup password like any key in chapter 6, on paper in 2 places, because an encrypted backup cannot be opened without it. StartOS writes encrypted backups to an external disk or a network folder, and umbrelOS can [run them automatically every hour](https://umbrel.com/support/backups-and-recovery/backing-up-your-data). If your platform does not schedule them, add a recurring reminder to your calendar.
 6. **Test a restore.** Recover 1 file from the backup, because a backup is only proven once something has come back from it.
-7. **Keep it updated.** Review platform and app updates at least monthly, read release notes and keep backups current. Apply relevant security fixes promptly; do not wait for the monthly review when a known vulnerability affects your setup.
+7. **Keep it updated.** Review platform and app updates at least monthly, read release notes and keep backups current. Apply relevant security fixes promptly; do not wait for the monthly review when a known vulnerability affects your setup. After a major upgrade, make a fresh backup. StartOS 0.4.0, for example, cannot restore backups made with earlier versions.
 8. **Only then add a second app.** Live with the first one for a few weeks before you grow.
 
 ## Mistakes to avoid
@@ -104,6 +104,7 @@ The example uses StartOS because it is open source and installs on ordinary hard
 - [Updating Google Photos' storage policy to build for the future](https://blog.google/products-and-platforms/products/photos/storage-changes/), Google, 11 November 2020.
 - [Strasbourg datacentre: latest information](https://corporate.ovhcloud.com/en/newsroom/news/informations-site-strasbourg/), OVHcloud, 18 March 2021, updated until April 2021.
 - [Umbrel licence (PolyForm Noncommercial 1.0.0)](https://github.com/getumbrel/umbrel/blob/master/LICENSE.md), Umbrel on GitHub, consulted in September 2026.
+- [StartOS v0.4.0 release notes](https://github.com/Start9Labs/start-technologies/releases/tag/start-os%2Fv0.4.0), Start9 Labs on GitHub, 24 July 2026, checked 29 October 2026.
 - [StartOS licence (MIT)](https://github.com/Start9Labs/start-technologies/blob/master/LICENSE), Start9 Labs on GitHub, consulted in September 2026.
 - [Backing up your data](https://umbrel.com/support/backups-and-recovery/backing-up-your-data), umbrelOS Support, consulted in September 2026.
 - [Tailnet Lock](https://tailscale.com/kb/1226/tailnet-lock), Tailscale documentation, consulted in September 2026.

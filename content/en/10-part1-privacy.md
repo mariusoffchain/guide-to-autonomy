@@ -8,7 +8,7 @@ Nobody considers it suspicious to close the bathroom door, to seal an envelope o
 
 When that choice disappears, behaviour tends to change. After the Snowden revelations of June 2013, the researcher Jon Penney measured [a statistically significant drop in visits to Wikipedia articles on terrorism-related topics](https://btlj.org/data/articles2016/vol31/31_1/0117_0182_Penney_ChillingEffects_WEB.pdf), a result published in the Berkeley Technology Law Journal in 2016. Nobody had forbidden those pages. Readers who felt observed opened them less, and the same reflex can hold back people who would like to disagree, to report abuse or simply to be different.
 
-"Nothing to hide" also rests on 2 assumptions, that the rules will never change and that whoever holds your data will always be well-meaning, competent and never hacked. The history of this region, within living memory, gives reasons to doubt the first. The Finnish case described below gives reasons to doubt the second.
+"Nothing to hide" also rests on 2 assumptions, that the rules will never change and that whoever holds your data will always be well-meaning, competent and never hacked. Europe's own history, within living memory, gives reasons to doubt the first. The Finnish case described below gives reasons to doubt the second.
 
 ### Metadata says more than the words
 

@@ -92,7 +92,7 @@ Some of its users see this exclusion as its strength. An asset that large market
 - [Deposit guarantee schemes, summary of Directive 2014/49/EU](https://eur-lex.europa.eu/EN/legal-content/summary/deposit-guarantee-schemes.html), EUR-Lex, consulted in September 2026.
 - [Cyprus: National Bank Holiday, 2013](https://elischolar.library.yale.edu/journal-of-financial-crises/vol7/iss2/4/), Yale Program on Financial Stability, Journal of Financial Crises, 2025.
 - [Executive Order 6102, Forbidding the Hoarding of Gold Coin, Gold Bullion and Gold Certificates](https://www.presidency.ucsb.edu/documents/executive-order-6102-forbidding-the-hoarding-gold-coin-gold-bullion-and-gold-certificates), The American Presidency Project, 5 April 1933.
-- [Regulation (EU) 2024/1624, Articles 79 and 80](https://eur-lex.europa.eu/eli/reg/2024/1624/oj/eng), Official Journal of the European Union, 31 May 2024.
+- [Regulation (EU) 2024/1624, Articles 79 and 80](https://eur-lex.europa.eu/eli/reg/2024/1624/oj/eng), adopted on 31 May 2024 and published in the Official Journal of the European Union on 19 June 2024.
 - [Support for Monero (XMR) in Europe](https://support.kraken.com/articles/support-for-monero-xmr-in-europe), Kraken, October 2024.
 - [Cover Story: The Mystery of $2 Billion of Loans Backed by Fake Gold](https://www.caixinglobal.com/2020-06-29/cover-story-the-mystery-of-2-billion-of-loans-backed-by-fake-gold-101572911.html), Caixin Global, 29 June 2020.
 - [Running a full node](https://bitcoin.org/en/full-node), Bitcoin.org, consulted in September 2026.

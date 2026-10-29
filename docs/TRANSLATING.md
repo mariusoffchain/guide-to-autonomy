@@ -2,16 +2,20 @@
 
 A language is a folder under `content/`. The English folder is the reference. A translation is an adaptation under CC BY-SA 4.0, with credit to the base, like any other edition.
 
+The base ships 2 languages: English (`content/en/`, built by `edition.json`) and French (`content/fr/`, built by `languages/fr/edition.json`). The French folder is a complete model of everything a translation contains: `strings.json`, `book.json`, `actions.json` with the same 90 ids, and the section ids described below.
+
 ## Set up the folder
 
+For a new language, German for example:
+
 ```bash
-cp -r content/en content/fr
+cp -r content/en content/de
 ```
 
-Then in `edition.json`:
+Then in the edition file of that language (`edition.json` if it is your only language, `languages/de/edition.json` next to the English, see "Several languages on one site"):
 
 ```json
-"language": {"code": "fr", "name": "Français", "direction": "ltr", "content_dir": "content/fr", "locale": "fr_FR"}
+"language": {"code": "de", "name": "Deutsch", "direction": "ltr", "content_dir": "content/de", "locale": "de_DE"}
 ```
 
 The build works immediately, with the English text in the new folder, so you can translate file by file and check as you go.
@@ -35,7 +39,7 @@ The build works immediately, with the English text in the new folder, so you can
 
 ## Working with translators and AI
 
-Translate meaning, not words, and keep the tone: short sentences, concrete, several options, sources named. Check every factual statement still holds in your country (laws, banks, prices, availability of tools) and replace examples that do not travel: the base text names Lithuania and the euro area in places, because that is where it was written. Machine translation is a draft, not a text: have a native reader go through every chapter, and keep the dates of verification.
+Translate meaning, not words, and keep the tone: short sentences, concrete, several options, sources named. Check every factual statement still holds in your country (laws, banks, prices, availability of tools) and replace examples that do not travel: part 3 uses examples from the European Union and the euro area (deposit guarantee, cash limits, inflation figures, exchanges, payment rules); adapt them as described in `docs/CUSTOMIZING.md`, section "Outside the European Union". Machine translation is a draft, not a text: have a native reader go through every chapter, and keep the dates of verification.
 
 ## Right-to-left scripts
 
@@ -47,12 +51,23 @@ System fonts cover most scripts. If your script needs a specific font (or you wa
 
 ## Several languages on one site
 
-Build each language as its own edition (its own `edition.json` under `examples/<lang>/` or in separate branches), publish them under `/en/`, `/fr/`, and list each in the other's `other_editions`. The language button of the header and the `hreflang` links come from that list.
+Each language is its own edition, with its own edition file, its own `storage_key` and its own address. The convention of the base:
+
+- the main edition (`edition.json`) is served at the root of the site;
+- each other language has an edition file `languages/<code>/edition.json`, served under `<root>/<code>/`. Its `language` block points to `content/<code>/`, its `site.base_path` is `"/<code>/"` (the address used by `python3 build.py --edition languages/<code>/edition.json --serve` and by the workflow's `address: edition.json`), and its `storage_key` differs from the main edition's, because both live on the same origin;
+- each edition lists the others in `other_editions`, with their full public address. The language button of the header, the footer links and the `hreflang` links come from that list. The addresses are absolute, so they do not follow a fork: if you publish your own copy, point them at your own site or empty the list.
+
+The GitHub Pages workflow builds the main edition, then every `languages/<code>/edition.json` into the same upload, in the folder `<code>/` (input `languages`, on by default; see `docs/HOSTING.md`). The checks workflow runs `build.py --check` on each of them, and `tests/test_kit.py` checks that they keep the 90 action ids of the base.
+
+To add a language: copy `languages/fr/` to `languages/<code>/`, change `language`, `site.base_path`, `storage_key`, the texts of `edition` and `book`, and the `other_editions` of every edition. Elsewhere than GitHub Pages, build each edition with `release.py` and upload each export into its folder (`docs/HOSTING.md`, "Several editions, one domain").
+
+## Translations in this repository
+
+- French (`content/fr/`, edition `languages/fr/edition.json`): follows the English text of 2026-10-29, that is version 1.1.0 with the corrections of the same day, with the same 90 action ids. Made from a complete draft of October 2026, then brought up to date passage by passage with assistance from an AI; a full reading by a native French reader is still welcome, especially for the safety steps of the seed, hardware wallet, email and password chapters. When the English changes, the French is updated in the same pull request or its `book.json` (`follows`) says which version it follows.
 
 ## Translations that exist outside this repository
 
 - Lithuanian: the translation of the first edition. It still carries references to the original conference and must be neutralised like the English before it can join the base.
-- French: a complete draft made in October 2026 from the English as it stood before the corrections of 2026-10-22. Before it can join the base, it needs the section ids above, a `strings.json`, the neutralisation of about 13 passages, and the retranslation of about 100 corrected passages in 21 files, including 6 reworded actions and the safety steps of the seed, hardware wallet, email and password chapters. Its 90 action ids already match the base.
 
 A translation joins the base only once it follows the current English, or says precisely which version it follows and which passages are pending.
 

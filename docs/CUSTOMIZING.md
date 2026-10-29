@@ -72,6 +72,22 @@ Add it to `parts` in `book.json` with its opening essay, give its chapters `part
 
 `{{community}}`, `{{contact}}`, `{{community_url}}`, `{{edition_name}}`, `{{book_title}}` are filled from `edition.json`. Use them where the text must name the publisher. An unknown placeholder stops the build.
 
+### Outside the European Union
+
+The base is written for readers in the European Union. Part 3 says so, and its legal, banking and price examples are those of the EU and the euro area. Most chapters travel unchanged. Outside the EU, rewrite these passages for your country (laws, deposit guarantee, inflation figures, licensed services, banks that accept Bitcoin exchanges) and keep the structure of each section:
+
+| File | Sections |
+|---|---|
+| `30-part3-work.md` | "Money that loses value by design", "Wealth that needs permission", "No perfect asset", the paragraph on European examples, the line of chapter 15 in the list of chapters |
+| `31-savings.md` | "When everything sits in the same place", the Cash and Bank deposit rows of "Choose where value can live", "The rules around an asset can change", the links of "Go further" |
+| `32-first-wallet.md` | "2 choices you will meet" and the wallet table (availability by region) |
+| `33-seed.md` | Prices in the table "Choose how to store it" |
+| `34-lightning-and-euros.md` | The title, "A ledger too slow for a coffee", the table of online services, "Who holds the funds, who can block", "Choose your bridge to euros" |
+| `35-bitcoin-privacy.md` | "KYC and what it implies", "Monero for spending, not for saving" |
+| `90-glossary.md` | MiCA, DAC8, CBDC |
+
+Renaming chapter 15 means changing its `#` line and its `title` in `book.json` together. Keep the chapter id `lightning-and-euros`, which readers' ticks depend on.
+
 ## Look
 
 Order of preference:

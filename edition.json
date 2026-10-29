@@ -43,7 +43,9 @@
  },
 
  "language": {"code": "en", "name": "English", "direction": "ltr", "content_dir": "content/en", "locale": "en_US"},
- "other_editions": [],
+ "other_editions": [
+  {"code": "fr", "name": "Français", "url": "https://mariusoffchain.github.io/guide-to-autonomy/fr/"}
+ ],
 
  "colors": {
   "scheme": "light",
@@ -72,5 +74,5 @@
 
  "site": {"url": "", "base_path": "/", "offline": false, "sitemap": true, "og_image": "", "favicon": ""},
  "storage_key": "guide-autonomy.v1",
- "directory": {"enabled": false, "file": "editions.json"}
+ "directory": {"enabled": true, "file": "editions.json"}
 }

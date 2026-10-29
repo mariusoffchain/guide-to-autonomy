@@ -6,6 +6,11 @@ This repository is the **shared base**: the kit a community uses to publish **it
 
 The text is free under [CC BY-SA 4.0](LICENSE-CONTENT), the code under [AGPL-3.0-or-later](LICENSE). Commercial use is allowed by both. Details in [`NOTICE`](NOTICE) and [`THIRD-PARTY.md`](THIRD-PARTY.md). The original work was written for PROOF, an initiative of Cypher Baltics, for the first PROOF conference (Vilnius, 2026). Your edition chooses its own identity; every built edition keeps a short credit to the original work and says that it is an adapted edition.
 
+## See it live
+
+- **[The base edition](https://mariusoffchain.github.io/guide-to-autonomy/)**, built from this repository as it is, with no identity of its own.
+- **[The PROOF edition](https://proofconference.com/book/en/)**, in English and [Lithuanian](https://proofconference.com/book/): the original, with the colours, fonts and logo of the conference it was written for. It shows what an edition with its own identity looks like.
+
 ## Make your edition with an AI assistant
 
 Fork this repository (button **Fork**), open your fork with an assistant that can read and edit files and run commands (Claude Code, Codex, Cursor, Aider and similar), and paste:

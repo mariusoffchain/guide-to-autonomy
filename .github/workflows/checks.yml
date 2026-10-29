@@ -26,3 +26,9 @@ jobs:
       - run: python3 -m pip install -r requirements.txt
       - run: python3 -m unittest discover tests
       - run: python3 build.py --check
+      - name: Check the language editions
+        run: |
+          for file in languages/*/edition.json; do
+            [ -f "$file" ] || continue
+            python3 build.py --edition "$file" --out "dist-$(basename "$(dirname "$file")")" --check
+          done

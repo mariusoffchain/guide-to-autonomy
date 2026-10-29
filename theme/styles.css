@@ -243,7 +243,7 @@ mark { background: var(--fg-20); color: var(--fg); padding: 0 0.1em; }
   font-family: var(--heading); font-weight: var(--heading-weight); line-height: 0.88; text-transform: var(--caps); letter-spacing: 0.01em;
   font-size: clamp(2.2rem, 8vw, 6rem);
   font-size: clamp(2.2rem, 14cqi, 6rem);
-  overflow-wrap: anywhere;
+  overflow-wrap: anywhere; -webkit-hyphens: auto; hyphens: auto;
 }
 .wm-conf { margin-top: 8px; font-size: clamp(13px, 1.3vw, 17px); letter-spacing: 0.15em; color: var(--bg-68); }
 .edition-line {
@@ -482,7 +482,7 @@ a.ch-row[aria-current="page"] { box-shadow: inset 3px 0 0 var(--accent); padding
   display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px;
   font-size: 12.5px; letter-spacing: 0.06em; color: var(--muted);
 }
-.ch-meta a { display: inline-flex; align-items: center; min-height: 44px; color: var(--fg); text-underline-offset: 3px; }
+.ch-meta a { display: inline-flex; align-items: center; gap: 0.3em; min-height: 44px; color: var(--fg); text-underline-offset: 3px; }
 .ch-readstate:not(:empty)::before { content: '✓ '; color: var(--accent-text); }
 .ch-readstate:empty { display: none; }
 @media (max-width: 640px) {
@@ -876,12 +876,12 @@ a.lang-name:hover { text-decoration: underline; }
 .offline-state { font-size: 13px; color: var(--muted); }
 .prose ul.actions-plain > li { padding-left: 1.6em; }
 .directory { margin-top: 28px; border-top: 1px solid var(--line); max-width: var(--measure); }
-.dir-item { padding: 22px 4px; border-bottom: 1px solid var(--line); display: grid; gap: 6px; }
+.dir-item { padding: 22px 4px; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; }
 .dir-item h2 { font-family: var(--heading); font-weight: var(--heading-weight); font-size: 1.35rem; line-height: 1.2; color: var(--fg); }
 .dir-community { font-size: 12px; letter-spacing: 0.12em; text-transform: var(--caps); color: var(--accent-text); }
 .dir-row { font-size: 0.92rem; color: var(--muted); }
 .dir-k { display: inline-block; min-width: 6.5rem; font-size: 11px; letter-spacing: 0.12em; text-transform: var(--caps); }
-.dir-row a { color: var(--fg); }
+.dir-row a { color: var(--fg); overflow-wrap: anywhere; }
 
 /* Right-to-left scripts: the reading column follows the document direction; fine tuning is welcome. */
 [dir="rtl"] .pager-next { text-align: left; align-items: flex-start; }

@@ -49,7 +49,10 @@
   {
    "id": "passwords-5",
    "chapter": "passwords",
-   "text": "Put your passphrase on paper in one safe place and your recovery codes in another, and tell 1 trusted person where"
+   "text": "Put your passphrase on paper in 1 safe place and your recovery codes in another, and tell 1 trusted person where",
+   "previous_texts": [
+    "Put your passphrase on paper in one safe place and your recovery codes in another, and tell 1 trusted person where"
+   ]
   },
   {
    "id": "browser-1",
@@ -180,7 +183,10 @@
   {
    "id": "nostr-first-zap",
    "chapter": "nostr",
-   "text": "Add a Lightning address to your profile and send your first zap"
+   "text": "Once you have a Lightning wallet (chapters 13 and 15), add a Lightning address to your profile and send your first zap",
+   "previous_texts": [
+    "Add a Lightning address to your profile and send your first zap"
+   ]
   },
   {
    "id": "big-tech-request-export",
@@ -343,9 +349,10 @@
   {
    "id": "seed-delete-digital-copies",
    "chapter": "seed",
-   "text": "Remove digital seed copies; if exposure is possible, move funds safely to a fresh wallet, since deletion does not undo a leak",
+   "text": "Delete every digital copy of your words, and move the funds to a fresh wallet if the words may have leaked",
    "previous_texts": [
-    "Delete any photo, note or file that contains them"
+    "Delete any photo, note or file that contains them",
+    "Remove digital seed copies; if exposure is possible, move funds safely to a fresh wallet, since deletion does not undo a leak"
    ]
   },
   {
@@ -356,9 +363,10 @@
   {
    "id": "seed-test-recovery",
    "chapter": "seed",
-   "text": "Test a tiny software wallet on a second device without deleting the original; check hardware backups only with the maker's hardware procedure",
+   "text": "Test your backup with a small balance, without deleting the original wallet, and with the maker's procedure for a hardware wallet",
    "previous_texts": [
-    "Test the recovery on a second device, without deleting the original app"
+    "Test the recovery on a second device, without deleting the original app",
+    "Test a tiny software wallet on a second device without deleting the original; check hardware backups only with the maker's hardware procedure"
    ]
   },
   {

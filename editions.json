@@ -15,5 +15,22 @@
    "reference": "where the maintainers asked to be listed, for example the address of their issue"
   }
  },
- "editions": []
+ "editions": [
+  {
+   "name": "PROOF edition",
+   "community": "PROOF, an initiative of Cypher Baltics",
+   "languages": [
+    "en",
+    "lt"
+   ],
+   "site": "https://proofconference.com/book/en/",
+   "repository": "https://github.com/mariusoffchain/proofconference",
+   "description": "The original edition, written for the first PROOF conference in Vilnius, in English and Lithuanian.",
+   "consent": {
+    "public_listing": true,
+    "date": "2026-10-29",
+    "reference": "Listed by its maintainer, who also maintains this base"
+   }
+  }
+ ]
 }

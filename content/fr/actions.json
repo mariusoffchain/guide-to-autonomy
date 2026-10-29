@@ -1,0 +1,455 @@
+{
+ "about": "Identifiants stables des actions de l'édition française. Ce sont les mêmes 90 ids que l'anglais (content/en/actions.json), pour la même action : build.py associe chaque ligne \"- [ ] ...\" d'une checklist à l'entrée du même chapitre dont le texte normalisé est identique (liens, casse, espaces, guillemets et effort entre parenthèses ignorés). Une action reformulée sans changer de sens garde son id : modifiez son \"text\" ici. Ne lancez pas --update-actions sur ce fichier, il créerait des ids différents de l'anglais.",
+ "actions": [
+  {
+   "id": "messages-1",
+   "chapter": "messages",
+   "text": "Installez une messagerie privée, verrouillez-la avec un PIN, masquez votre numéro et activez les messages éphémères"
+  },
+  {
+   "id": "messages-2",
+   "chapter": "messages",
+   "text": "Déplacez vos 5 contacts les plus proches et votre groupe familial"
+  },
+  {
+   "id": "messages-3",
+   "chapter": "messages",
+   "text": "Vérifiez le numéro de sécurité de vos 3 contacts les plus importants"
+  },
+  {
+   "id": "messages-4",
+   "chapter": "messages",
+   "text": "Installez une seconde messagerie qui ne nécessite aucun numéro de téléphone"
+  },
+  {
+   "id": "messages-5",
+   "chapter": "messages",
+   "text": "Activez les sauvegardes chiffrées dans les applications que vous conservez"
+  },
+  {
+   "id": "passwords-1",
+   "chapter": "passwords",
+   "text": "Vérifiez votre adresse email sur Have I Been Pwned"
+  },
+  {
+   "id": "passwords-2",
+   "chapter": "passwords",
+   "text": "Installez un gestionnaire de mots de passe et créez une passphrase de 6 mots aléatoires"
+  },
+  {
+   "id": "passwords-3",
+   "chapter": "passwords",
+   "text": "Donnez à votre email un nouveau mot de passe unique et activez le 2FA avec une application d'authentification, plus vos 2 clés matérielles si vous en avez acheté"
+  },
+  {
+   "id": "passwords-4",
+   "chapter": "passwords",
+   "text": "Déplacez vos 4 comptes suivants les plus importants et supprimez les codes par SMS quand c'est possible"
+  },
+  {
+   "id": "passwords-5",
+   "chapter": "passwords",
+   "text": "Mettez votre passphrase sur papier à 1 endroit sûr et vos codes de récupération à un autre, et dites à 1 personne de confiance où ils se trouvent"
+  },
+  {
+   "id": "browser-1",
+   "chapter": "browser",
+   "text": "Changez le moteur de recherche par défaut sur votre ordinateur et votre téléphone"
+  },
+  {
+   "id": "browser-2",
+   "chapter": "browser",
+   "text": "Installez un navigateur qui bloque le pistage et faites-en votre navigateur par défaut"
+  },
+  {
+   "id": "browser-3",
+   "chapter": "browser",
+   "text": "Ajoutez uBlock Origin là où c'est possible, ou utilisez le bloqueur de votre navigateur, et supprimez les extensions inutilisées"
+  },
+  {
+   "id": "browser-4",
+   "chapter": "browser",
+   "text": "Déplacez vos sessions Google et Facebook vers un second navigateur"
+  },
+  {
+   "id": "browser-5",
+   "chapter": "browser",
+   "text": "Testez votre navigateur sur coveryourtracks.eff.org"
+  },
+  {
+   "id": "email-open-mailbox",
+   "chapter": "email",
+   "text": "Ouvrez une boîte email chez un fournisseur financé par ses utilisateurs"
+  },
+  {
+   "id": "email-alias-service",
+   "chapter": "email",
+   "text": "Configurez un service d'alias et son extension de navigateur"
+  },
+  {
+   "id": "email-first-alias",
+   "chapter": "email",
+   "text": "Créez votre premier alias et utilisez-le pour votre prochaine inscription"
+  },
+  {
+   "id": "email-move-5-accounts",
+   "chapter": "email",
+   "text": "Déplacez vos 5 comptes les plus importants vers la nouvelle adresse"
+  },
+  {
+   "id": "email-forward-old-mailbox",
+   "chapter": "email",
+   "text": "Transférez l'ancienne boîte et déplacez les comptes restants"
+  },
+  {
+   "id": "network-encrypted-dns",
+   "chapter": "network",
+   "text": "Activez le DNS chiffré sur votre téléphone et dans votre navigateur"
+  },
+  {
+   "id": "network-install-vpn",
+   "chapter": "network",
+   "text": "Choisissez et installez un VPN auprès d'un opérateur digne de confiance"
+  },
+  {
+   "id": "network-kill-switch-leaks",
+   "chapter": "network",
+   "text": "Activez le kill switch et la connexion automatique, puis vérifiez l'absence de fuites"
+  },
+  {
+   "id": "network-try-tor-browser",
+   "chapter": "network",
+   "text": "Installez Tor Browser et essayez-le 1 fois"
+  },
+  {
+   "id": "network-remove-free-vpn",
+   "chapter": "network",
+   "text": "Supprimez les applications de VPN dont l'opérateur ou les pratiques de confidentialité ne vous inspirent pas confiance"
+  },
+  {
+   "id": "keys-list-keys-codes",
+   "chapter": "keys",
+   "text": "Listez toutes les clés et tous les codes de récupération que vous possédez déjà"
+  },
+  {
+   "id": "keys-write-backups",
+   "chapter": "keys",
+   "text": "Écrivez à la main les sauvegardes manquantes et rangez-les dans 2 endroits"
+  },
+  {
+   "id": "keys-test-recovery",
+   "chapter": "keys",
+   "text": "Testez une récupération avec un vrai code de récupération"
+  },
+  {
+   "id": "keys-tell-trusted-person",
+   "chapter": "keys",
+   "text": "Prévenez une personne de confiance de l'endroit où se trouvent vos sauvegardes"
+  },
+  {
+   "id": "keys-buy-security-keys",
+   "chapter": "keys",
+   "text": "Achetez 2 clés de sécurité et ajoutez-les à vos comptes principaux"
+  },
+  {
+   "id": "nostr-create-keys",
+   "chapter": "nostr",
+   "text": "Installez un client et créez vos clés"
+  },
+  {
+   "id": "nostr-back-up-nsec",
+   "chapter": "nostr",
+   "text": "Sauvegardez votre nsec sur papier ou dans votre gestionnaire de mots de passe"
+  },
+  {
+   "id": "nostr-profile-follow",
+   "chapter": "nostr",
+   "text": "Remplissez votre profil et suivez quelques personnes que vous connaissez déjà"
+  },
+  {
+   "id": "nostr-signer-second-client",
+   "chapter": "nostr",
+   "text": "Installez un signer et connectez-vous à un 2e client grâce à lui"
+  },
+  {
+   "id": "nostr-first-zap",
+   "chapter": "nostr",
+   "text": "Une fois que vous avez un wallet Lightning (chapitres 13 et 15), ajoutez une adresse Lightning à votre profil et envoyez votre premier zap"
+  },
+  {
+   "id": "big-tech-request-export",
+   "chapter": "big-tech",
+   "text": "Demandez votre export de données à Google, Apple ou Meta"
+  },
+  {
+   "id": "big-tech-replace-easy-service",
+   "chapter": "big-tech",
+   "text": "Remplacez 1 service facile, recherche, cartes ou notes"
+  },
+  {
+   "id": "big-tech-run-in-parallel",
+   "chapter": "big-tech",
+   "text": "Choisissez votre premier service important et faites-le tourner en parallèle pendant 2 semaines"
+  },
+  {
+   "id": "big-tech-move-data",
+   "chapter": "big-tech",
+   "text": "Déplacez les données et changez les services par défaut, et ne supprimez l'ancienne copie dans le cloud qu'après avoir vérifié une sauvegarde indépendante et désactivé la synchronisation sur les appareils dont vous voulez garder les copies"
+  },
+  {
+   "id": "big-tech-plan-next-service",
+   "chapter": "big-tech",
+   "text": "Notez dans votre agenda le prochain service à remplacer, dans 1 mois"
+  },
+  {
+   "id": "phone-uninstall-apps",
+   "chapter": "phone",
+   "text": "Désinstallez les apps que vous n'utilisez plus"
+  },
+  {
+   "id": "phone-review-permissions",
+   "chapter": "phone",
+   "text": "Passez en revue les autorisations de localisation, de micro, de caméra et de contacts"
+  },
+  {
+   "id": "phone-advertising-id",
+   "chapter": "phone",
+   "text": "Supprimez l'identifiant publicitaire ou désactivez le suivi"
+  },
+  {
+   "id": "phone-pin-sim-pin",
+   "chapter": "phone",
+   "text": "Définissez un PIN de 6 chiffres ou plus, et un PIN de carte SIM"
+  },
+  {
+   "id": "phone-adp-or-f-droid",
+   "chapter": "phone",
+   "text": "Sur iPhone, activez la Protection avancée des données. Sur Android, installez F-Droid et essayez 1 app"
+  },
+  {
+   "id": "self-hosting-find-computer",
+   "chapter": "self-hosting",
+   "text": "Trouvez un ordinateur qui peut rester allumé, comme un vieux portable, un mini PC ou un Raspberry Pi"
+  },
+  {
+   "id": "self-hosting-install-platform",
+   "chapter": "self-hosting",
+   "text": "Installez une plateforme et une première app"
+  },
+  {
+   "id": "self-hosting-automatic-backups",
+   "chapter": "self-hosting",
+   "text": "Mettez en place des sauvegardes automatiques sur un 2e disque, plus une copie hors site"
+  },
+  {
+   "id": "self-hosting-test-restore",
+   "chapter": "self-hosting",
+   "text": "Restaurez un fichier depuis la sauvegarde pour vérifier que cela fonctionne"
+  },
+  {
+   "id": "self-hosting-remote-access",
+   "chapter": "self-hosting",
+   "text": "Choisissez une façon sûre de l'atteindre de l'extérieur, et changez tous les mots de passe par défaut"
+  },
+  {
+   "id": "ai-install-local-app",
+   "chapter": "ai",
+   "text": "Installez 1 app d'IA locale et téléchargez un petit modèle"
+  },
+  {
+   "id": "ai-offline-check",
+   "chapter": "ai",
+   "text": "Coupez le réseau et vérifiez que le modèle répond toujours"
+  },
+  {
+   "id": "ai-private-document",
+   "chapter": "ai",
+   "text": "Essayez-le sur un document que vous ne téléverseriez jamais"
+  },
+  {
+   "id": "ai-turn-off-training",
+   "chapter": "ai",
+   "text": "Désactivez l'entraînement et l'historique des discussions dans les assistants en ligne que vous gardez"
+  },
+  {
+   "id": "ai-write-rules",
+   "chapter": "ai",
+   "text": "Notez ce qui reste en local, ce qui peut aller en ligne, et ce qu'aucune IA ne voit jamais"
+  },
+  {
+   "id": "savings-draw-map",
+   "chapter": "savings",
+   "text": "Dessinez la carte de l'endroit où se trouve votre épargne et de qui détient chaque part"
+  },
+  {
+   "id": "savings-5-questions",
+   "chapter": "savings",
+   "text": "Répondez aux 5 questions pour votre compte principal et votre principal investissement"
+  },
+  {
+   "id": "savings-single-point",
+   "chapter": "savings",
+   "text": "Vérifiez qu'aucune banque ni aucun courtier unique ne détient tout ce que vous possédez"
+  },
+  {
+   "id": "savings-cash-reserve",
+   "chapter": "savings",
+   "text": "Constituez une petite réserve en espèces à la maison"
+  },
+  {
+   "id": "savings-choose-asset",
+   "chapter": "savings",
+   "text": "Décidez quel actif détenu par vous-même vous voulez apprendre en premier, et avec quelle petite somme"
+  },
+  {
+   "id": "first-wallet-install",
+   "chapter": "first-wallet",
+   "text": "Installez un wallet en self-custody depuis sa source officielle, après avoir vérifié le nom du développeur et sa page sur walletscrutiny.com"
+  },
+  {
+   "id": "first-wallet-write-words",
+   "chapter": "first-wallet",
+   "text": "Notez les mots de récupération sur papier avant de recevoir quoi que ce soit"
+  },
+  {
+   "id": "first-wallet-first-payment",
+   "chapter": "first-wallet",
+   "text": "Recevez un premier paiement supérieur aux frais de mise en place et renvoyez-en une partie"
+  },
+  {
+   "id": "first-wallet-second-wallet",
+   "chapter": "first-wallet",
+   "text": "Installez un second wallet d'une autre équipe et comparez"
+  },
+  {
+   "id": "first-wallet-leave-exchange",
+   "chapter": "first-wallet",
+   "text": "Déplacez vers un wallet que vous contrôlez tout ce que vous aviez laissé sur une plateforme d'échange"
+  },
+  {
+   "id": "seed-write-by-hand",
+   "chapter": "seed",
+   "text": "Écrivez vos mots à la main et vérifiez-les 2 fois"
+  },
+  {
+   "id": "seed-delete-digital-copies",
+   "chapter": "seed",
+   "text": "Supprimez toute copie numérique de vos mots, et transférez les fonds vers un nouveau wallet si les mots ont pu fuiter"
+  },
+  {
+   "id": "seed-second-copy",
+   "chapter": "seed",
+   "text": "Faites une seconde copie et conservez-la dans un second endroit"
+  },
+  {
+   "id": "seed-test-recovery",
+   "chapter": "seed",
+   "text": "Testez votre sauvegarde avec un petit solde, sans supprimer le wallet d'origine, et avec la procédure du fabricant pour un hardware wallet"
+  },
+  {
+   "id": "seed-letter-steel-copy",
+   "chapter": "seed",
+   "text": "Rédigez la lettre scellée pour votre famille et faites une copie en acier"
+  },
+  {
+   "id": "lightning-and-euros-pay-invoice",
+   "chapter": "lightning-and-euros",
+   "text": "Payez une facture Lightning, chez un commerçant ou lors d'un meetup"
+  },
+  {
+   "id": "lightning-and-euros-lightning-address",
+   "chapter": "lightning-and-euros",
+   "text": "Obtenez une adresse Lightning et testez-la depuis un second wallet"
+  },
+  {
+   "id": "lightning-and-euros-btcmap",
+   "chapter": "lightning-and-euros",
+   "text": "Trouvez 3 lieux près de chez vous sur btcmap.org"
+  },
+  {
+   "id": "lightning-and-euros-withdraw",
+   "chapter": "lightning-and-euros",
+   "text": "Retirez tout solde d'un courtier ou d'une plateforme d'échange vers votre propre wallet"
+  },
+  {
+   "id": "lightning-and-euros-peer-to-peer",
+   "chapter": "lightning-and-euros",
+   "text": "Lisez comment fonctionne une plateforme d'échange de pair à pair, avant d'en avoir besoin"
+  },
+  {
+   "id": "bitcoin-privacy-fresh-address",
+   "chapter": "bitcoin-privacy",
+   "text": "Vérifiez que votre wallet affiche une adresse neuve pour chaque paiement"
+  },
+  {
+   "id": "bitcoin-privacy-public-addresses",
+   "chapter": "bitcoin-privacy",
+   "text": "Retrouvez toute adresse ou tout solde que vous avez publié, et cessez de recevoir sur ces adresses"
+  },
+  {
+   "id": "bitcoin-privacy-separate-wallets",
+   "chapter": "bitcoin-privacy",
+   "text": "Créez des wallets séparés pour l'épargne, les dépenses et les retraits depuis les plateformes d'échange"
+  },
+  {
+   "id": "bitcoin-privacy-label-coins",
+   "chapter": "bitcoin-privacy",
+   "text": "Étiquetez chaque pièce que vous possédez avec son origine"
+  },
+  {
+   "id": "bitcoin-privacy-own-node",
+   "chapter": "bitcoin-privacy",
+   "text": "Connectez votre wallet à votre propre nœud, après le chapitre 18"
+  },
+  {
+   "id": "hardware-wallet-savings-amount",
+   "chapter": "hardware-wallet",
+   "text": "Décidez quel montant est de l'« épargne » pour vous et n'a plus sa place sur un téléphone"
+  },
+  {
+   "id": "hardware-wallet-order-device",
+   "chapter": "hardware-wallet",
+   "text": "Choisissez un appareil dans le tableau et commandez-le chez le fabricant, vers un point de retrait"
+  },
+  {
+   "id": "hardware-wallet-set-up",
+   "chapter": "hardware-wallet",
+   "text": "Vérifiez l'appareil et son firmware comme le décrit le fabricant, créez une nouvelle seed et une sauvegarde, puis envoyez un montant de test"
+  },
+  {
+   "id": "hardware-wallet-test-restore",
+   "chapter": "hardware-wallet",
+   "text": "Avec seulement un minuscule solde de test, suivez la procédure du fabricant pour vérifier la sauvegarde de l'appareil ou le restaurer, avant d'ajouter votre épargne"
+  },
+  {
+   "id": "hardware-wallet-verify-address",
+   "chapter": "hardware-wallet",
+   "text": "Vérifiez l'adresse sur l'écran de l'appareil à chaque réception"
+  },
+  {
+   "id": "node-check-server",
+   "chapter": "node",
+   "text": "Regardez dans les paramètres réseau de votre wallet quel serveur il utilise aujourd'hui"
+  },
+  {
+   "id": "node-bitcoin-core-pruned",
+   "chapter": "node",
+   "text": "Vérifiez le téléchargement de Bitcoin Core, installez-le en mode élagué pour qu'il ne remplisse pas votre disque, et regardez-le se synchroniser"
+  },
+  {
+   "id": "node-choose-platform",
+   "chapter": "node",
+   "text": "Choisissez une plateforme et le matériel pour un nœud dédié, avec un SSD de 2 To"
+  },
+  {
+   "id": "node-build-node",
+   "chapter": "node",
+   "text": "Construisez le nœud, lancez la synchronisation (quelques jours, sans surveillance) et ajoutez un serveur Electrum"
+  },
+  {
+   "id": "node-connect-wallet",
+   "chapter": "node",
+   "text": "Pointez votre wallet vers votre propre nœud et retirez le serveur public"
+  }
+ ]
+}

@@ -64,9 +64,10 @@ The repository ships `.github/workflows/pages.yml`. It installs Python-Markdown,
 3. Actions tab > "Build and publish the edition" > **Run workflow**, on the default branch (the only one GitHub Pages deploys from unless you change the rules of the `github-pages` environment). 2 choices:
    - `edition`: the edition file, `edition.json` by default, or `examples/<slug>/edition.json`.
    - `address`: `github-pages` (default) writes the address GitHub gives this site into the canonical links and the sitemap: `https://<user>.github.io/<repository>/`, or your custom domain once it is set in Settings > Pages. `edition.json` uses `site.url` and `site.base_path` of the edition file unchanged.
+   - `languages` (on by default): also builds every language edition `languages/<code>/edition.json` into the same upload, in the folder `<code>/`. With `address: github-pages` its address is the site's address followed by `<code>/` (for the French edition of the base, `https://<user>.github.io/<repository>/fr/`); with `address: edition.json` it uses its own `site.url` and `site.base_path`. The run stops if the main edition already has a page or folder named like a language code. Untick it to publish the main edition alone, for example in a fork that has not adapted those editions (their `other_editions` point to the base's site, see `docs/TRANSLATING.md`).
 4. When the run is green, its summary shows the address. Check it with the list at the end of this page.
 
-The address is right from the first run, even with an empty `site.url`. The source ZIP of that build says which address was used (`SOURCE-README.txt`), so the same pages can be rebuilt. With the `gh` command-line tool, step 3 is `gh workflow run pages.yml -f edition=edition.json -f address=github-pages`.
+The address is right from the first run, even with an empty `site.url`. The source ZIP of that build says which address was used (`SOURCE-README.txt`), so the same pages can be rebuilt. With the `gh` command-line tool, step 3 is `gh workflow run pages.yml -f edition=edition.json -f address=github-pages -f languages=true`.
 
 Custom domain: set it in Settings > Pages (GitHub adds a `CNAME` record on its side; follow its DNS instructions), then run the workflow again. With `address: github-pages`, the pages then carry the custom domain and `base_path` `/`.
 
@@ -96,6 +97,15 @@ Pages and `sw.js` should not be cached for long by the browser or a CDN; assets 
 ## Several editions, one domain
 
 Give each edition its own `base_path` (`/en/`, `/lt/`, `/guide/`) and its own `storage_key`, so that ticks never mix. List the others in each edition's `other_editions` so readers can switch.
+
+The base itself does this for its languages: English at the root, French under `fr/`. By hand, export each edition into its folder of the same upload, the main one first (`release.py` refuses a folder that already holds files, and `publish/fr/` is new inside `publish/`):
+
+```bash
+python3 release.py --edition edition.json --out dist --dest publish
+python3 release.py --edition languages/fr/edition.json --out dist-fr --dest publish/fr
+```
+
+Each edition has its own `sitemap.xml`; the `robots.txt` at the root names only the main one. The `404.html` served for a missing address is the main edition's, in its language.
 
 ## Headers, if you can set them
 
